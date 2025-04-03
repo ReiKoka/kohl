@@ -1,10 +1,9 @@
 import React from "react";
-import { useDotButton } from "./EmblaCarouselDotButton";
 import { usePrevNextButtons } from "./EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { CarouselPrevButton } from "./ui/CarouselPrevButton";
 import { CarouselNextButton } from "./ui/CarouselNextButton";
-import { CarouselDotButton } from "./ui/CarouselDotButton";
+
 import Autoplay from "embla-carousel-autoplay";
 
 const EmblaCarousel = (props) => {
@@ -12,9 +11,6 @@ const EmblaCarousel = (props) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
     Autoplay({ playOnInit: true, delay: 5000 }),
   ]);
-
-  const { selectedIndex, scrollSnaps, onDotButtonClick } =
-    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
@@ -38,30 +34,14 @@ const EmblaCarousel = (props) => {
         </div>
       </div>
 
-      <div className="embla__controls">
-        <div className="embla__buttons">
-          <CarouselPrevButton
-            onClick={onPrevButtonClick}
-            disabled={prevBtnDisabled}
-          />
-          <CarouselNextButton
-            onClick={onNextButtonClick}
-            disabled={nextBtnDisabled}
-          />
-        </div>
-
-        <div className="embla__dots">
-          {scrollSnaps.map((_, index) => (
-            <CarouselDotButton
-              key={index}
-              onClick={() => onDotButtonClick(index)}
-              className={"embla__dot".concat(
-                index === selectedIndex ? " embla__dot--selected" : ""
-              )}
-            />
-          ))}
-        </div>
-      </div>
+      <CarouselPrevButton
+        onClick={onPrevButtonClick}
+        disabled={prevBtnDisabled}
+      />
+      <CarouselNextButton
+        onClick={onNextButtonClick}
+        disabled={nextBtnDisabled}
+      />
     </section>
   );
 };
