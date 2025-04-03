@@ -13,6 +13,7 @@ function AppLayout() {
           minHeight: `calc(100svh - ${navHeight}px)`,
           marginTop: `${navHeight}px`,
         }}
+        className="overflow-y-auto overflow-x-clip"
       >
         <Outlet />
       </div>

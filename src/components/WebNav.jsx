@@ -1,9 +1,16 @@
+import { links } from "../utils/constants";
+import WebNavLink from "./web/WebNavLink";
+
 function WebNav() {
   return (
-    <div>
-      WebNav
-    </div>
-  )
+    <nav className="w-fit ml-auto">
+      <ul className="flex gap-2">
+        {links.map((link) => (
+          <WebNavLink key={link.title} to={link.to} title={link.title} />
+        ))}
+      </ul>
+    </nav>
+  );
 }
 
-export default WebNav
+export default WebNav;

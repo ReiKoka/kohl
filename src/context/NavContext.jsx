@@ -1,4 +1,4 @@
-import { createContext, useEffect, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState, useCallback } from "react";
 
 const NavContext = createContext();
 
@@ -6,21 +6,33 @@ export const NavProvider = ({ children }) => {
   const navRef = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
 
+  const updateHeight = useCallback((observedElement) => {
+    if (observedElement) {
+      setNavHeight(observedElement.offsetHeight);
+    }
+  }, []);
+
   useEffect(() => {
-    const updateHeight = () => {
-      if (navRef.current) {
-        setNavHeight(navRef.current.offsetHeight);
+    const node = navRef.current;
+    if (!node) {
+      return;
+    }
+
+    updateHeight(node);
+
+    const observer = new ResizeObserver((entries) => {
+      const entry = entries[0];
+      if (entry) {
+        updateHeight(entry.target);
       }
-    };
-
-    updateHeight();
-
-    window.addEventListener("resize", updateHeight);
+    });
+    observer.observe(node);
 
     return () => {
-      window.removeEventListener("resize", updateHeight);
+      observer.disconnect();
     };
-  }, []);
+  }, [updateHeight]);
+
   return (
     <NavContext.Provider value={{ navRef, navHeight }}>
       {children}
