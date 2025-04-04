@@ -41,7 +41,7 @@ function MobileNav() {
   };
 
   const navPanelClasses = `
-    fixed z-50 bg-base-200 top-0 -left-full w-4/5 h-full flex p-6 flex-col
+    fixed z-50 bg-base-200 top-0 -left-full w-4/5 md:w-1/3 h-full flex p-6 flex-col
     rounded-br-2xl rounded-tr-2xl
     animate-fade-right animate-once duration-700 transition-all animate-ease-out
     ${isMobileNavOpen ? "translate-x-[100vw]" : ""}
@@ -51,7 +51,7 @@ function MobileNav() {
     <>
       <button
         ref={toggleButtonRef}
-        className="btn border border-primary bg-base-300 p-1 aspect-square ml-auto hover:bg-primary group active:scale-95"
+        className="btn border-primary bg-base-300 hover:bg-primary group ml-auto aspect-square border p-1 active:scale-95"
         onClick={toggleMobileNav}
         aria-label="Toggle mobile navigation"
         aria-expanded={isMobileNavOpen}
@@ -59,7 +59,7 @@ function MobileNav() {
       >
         <Champagne
           size={24}
-          className="fill-primary rotate-12 group-hover:fill-primary-content"
+          className="fill-primary group-hover:fill-primary-content rotate-12"
           weight="regular"
         />
       </button>
@@ -72,8 +72,8 @@ function MobileNav() {
             className={navPanelClasses}
             aria-hidden={!isMobileNavOpen}
           >
-            <img src="/logo.png" alt="" className="w-20 mx-auto mb-14" />
-            <ul className="flex flex-col gap-4 font-secondary mx-auto">
+            <img src="/logo.png" alt="" className="mx-auto mb-14 w-20" />
+            <ul className="font-secondary flex w-full flex-col gap-4">
               {links.map((link) => (
                 <MobileNavLink
                   key={link.title}
@@ -85,7 +85,7 @@ function MobileNav() {
               ))}
             </ul>
           </div>,
-          portalContainer
+          portalContainer,
         )}
     </>
   );

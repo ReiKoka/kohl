@@ -27,7 +27,7 @@
 .embla__slide__number {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position: bottom;
   height: var(--slide-height);
   user-select: none;
 }

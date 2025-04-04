@@ -9,7 +9,12 @@ import Autoplay from "embla-carousel-autoplay";
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [
-    Autoplay({ playOnInit: true, delay: 5000 }),
+    Autoplay({
+      playOnInit: true,
+      delay: 5000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    }),
   ]);
 
   const {
