@@ -3,7 +3,8 @@
 
 @font-face {
   font-family: "Satoshi-Variable";
-  src: url("./assets/fonts/Satoshi-Variable.woff2") format("woff2"),
+  src:
+    url("./assets/fonts/Satoshi-Variable.woff2") format("woff2"),
     url("./assets/fonts/Satoshi-Variable.woff") format("woff"),
     url("./assets/fonts/Satoshi-Variable.ttf") format("truetype");
   font-weight: 300 900;
@@ -13,6 +14,8 @@
 
 :root {
   --font-secondary: "Noto Serif", serif;
+  --breakpoint-2xl: 90rem;
+  --breakpoint-3xl: 96rem;
 }
 
 @plugin "daisyui/theme" {
@@ -27,7 +30,7 @@
   --color-primary: oklch(0.48 0.1884 18.15);
   --color-primary-content: oklch(98% 0 0);
   --color-secondary: oklch(0.64 0.0257 69.42);
-  --color-secondary-content: oklch(27% 0.072 132.109);
+  --color-secondary-content: oklch(98% 0 0);
   --color-accent: oklch(80% 0.114 19.571);
   --color-accent-content: oklch(25% 0.092 26.042);
   --color-neutral: oklch(14% 0.005 285.823);
