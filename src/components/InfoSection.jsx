@@ -10,8 +10,8 @@ import SingleInfographic from "./ui/SingleInfographic";
 
 function InfoSection() {
   return (
-    <section className="border-secondary/50 border-t border-b md:p-8 lg:px-8 lg:py-12">
-      <h1 className="font-secondary text-secondary pt-4 text-center text-2xl font-normal capitalize md:text-3xl lg:text-4xl">
+    <section className="border-secondary/30 border-t border-b md:p-8 lg:px-8 lg:py-12">
+      <h1 className="font-secondary text-secondary pt-4 text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
         apple delights
       </h1>
 
