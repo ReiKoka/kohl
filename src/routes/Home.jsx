@@ -10,6 +10,8 @@ import img8 from "../assets/images/hero_background_8.webp";
 import img9 from "../assets/images/hero_background_9.webp";
 import img10 from "../assets/images/hero_background_10.webp";
 import InfoSection from "../components/InfoSection";
+import Footer from "./../components/Footer";
+import Gourmet from "../components/Gourmet";
 
 const slides = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 const options = { loop: true };
@@ -17,9 +19,13 @@ const options = { loop: true };
 function Home() {
   return (
     <div className="font-secondary h-2/5 md:portrait:h-1/2 sm:landscape:h-full lg:landscape:h-full">
-      <div className="carousel-wrapper h-full">
+      <div className="h-full">
         <EmblaCarousel slides={slides} options={options} />
         <InfoSection />
+        <Gourmet />
+        <Cuuve />
+
+        <Footer />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-function SingleInfographic({ icon: Icon, title }) {
+function SingleInfographic({ icon: Icon, title, text }) {
   return (
     <div className="mb-3 flex flex-1/3 flex-col items-center justify-center gap-2.5 md:flex-1/6 md:py-4 2xl:gap-5">
       <div className="border-secondary aspect-square max-w-full rounded-full border p-3 lg:p-4 2xl:p-5">
@@ -7,6 +7,7 @@ function SingleInfographic({ icon: Icon, title }) {
       <p className="text-secondary max-w-full text-center text-[8px] leading-4 md:text-xs lg:text-sm 2xl:text-base 2xl:leading-6">
         {title}
       </p>
+      
     </div>
   );
 }

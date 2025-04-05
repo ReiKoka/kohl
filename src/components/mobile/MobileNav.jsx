@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useOnClickOutside } from "usehooks-ts";
-import { Champagne } from "@phosphor-icons/react";
+import { Champagne, Cheers } from "@phosphor-icons/react";
 import { createPortal } from "react-dom";
 import { links } from "./../../utils/constants";
 import MobileNavLink from "./MobileNavLink";
@@ -57,7 +57,7 @@ function MobileNav() {
         aria-expanded={isMobileNavOpen}
         aria-controls="mobile-nav-panel"
       >
-        <Champagne
+        <Cheers
           size={24}
           className="fill-primary group-hover:fill-primary-content rotate-12"
           weight="regular"

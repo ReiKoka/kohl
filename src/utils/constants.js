@@ -1,4 +1,4 @@
-import { Cheers, House, Question, ShoppingCartSimple } from "@phosphor-icons/react";
+import { Champagne, Cheers, House, Question, ShoppingCartSimple } from "@phosphor-icons/react";
 
 export const links = [
   {
@@ -7,7 +7,7 @@ export const links = [
     title: 'Home'
   }, {
     to: '/juices',
-    icon: Cheers,
+    icon: Champagne,
     title: 'Juices'
   }, {
     to: '/about',

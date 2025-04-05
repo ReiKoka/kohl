@@ -23,6 +23,13 @@ function InfoSection() {
         and suitable partners or with extracts with exciting flavours.
         <br />
         <br />
+        Everything the apples give us they take from nature: from the sun, water
+        and the power of the earth. With great respect and a commitment to
+        uncompromising quality, we accompany them in their development: from the
+        bud and the flower to the ripe fruit. The juice is a concentrated
+        expression of their essence and thus of the essence of South Tyrol.
+        <br />
+        <br />
         Our apple juices from the mountain – refreshing treats for in-between
         and the modern approach to food pairing. Apple juices such as you have
         never tasted before.
