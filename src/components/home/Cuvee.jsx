@@ -4,7 +4,7 @@ function Cuvee() {
   return (
     <div className="border-secondary/30 mt-8 w-full border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
-        Cuvee
+        Cuvée
       </h1>
 
       <div className="flex flex-col gap-2">
