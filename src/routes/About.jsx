@@ -13,7 +13,7 @@ function About() {
         <h3 className="font-secondary text-secondary pt-4 text-center text-base font-normal md:text-lg">
           How do apples do so well at a height of almost 1,000 metres?
         </h3>
-        <p className="font-secondary text-secondary mx-auto max-w-3xl flex-[1] px-5 pt-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
+        <p className="font-secondary text-secondary mx-auto max-w-3xl flex-[1] px-5 pt-4 text-center text-xs font-light md:mt-4 md:text-lg lg:my-6 2xl:max-w-5xl">
           Apples can do so much! Low carb, detox, superfood, healthy fruit,
           quick snack – apples are wonderfully versatile and highly beneficial
           for the organism.
@@ -29,21 +29,21 @@ function About() {
           great taste – all this is contained in our juices.
         </p>
 
-        <div className="w-full flex-row-reverse items-center gap-8 px-5 lg:flex lg:pt-10">
-          <p className="font-secondary text-secondary mx-auto max-w-3xl flex-[1] py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
+        <div className="w-full flex-row-reverse items-center gap-8 px-5 xl:flex xl:pt-10">
+          <p className="font-secondary text-secondary mx-auto max-w-3xl flex-[1] py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:my-6 2xl:max-w-5xl">
             In Unterinn on the Ritten the official term is{" "}
             <span className="text-primary font-medium">“mountain apples”</span>.
             They benefit from the more intensive sunshine and the cool winds.
             Every apple is given the time it needs to ripen.
           </p>
           <div
-            className="mx-auto aspect-[4/3] max-h-[600px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl lg:max-w-3xl lg:min-w-3xl lg:px-0"
+            className="mx-auto aspect-[4/3] max-h-[500px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl xl:mx-0 xl:max-h-[600px] xl:max-w-3xl xl:min-w-3xl xl:px-0"
             style={{ backgroundImage: `url(${img1})` }}
           ></div>
         </div>
 
-        <div className="w-full items-center gap-8 px-5 lg:flex lg:pt-10">
-          <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
+        <div className="w-full items-center gap-8 px-5 xl:flex xl:pt-10">
+          <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:my-6 2xl:max-w-5xl">
             Two to three passes is all it takes to harvest the apples from a
             tree when they ripen between August and November, depending on the
             variety, the site and the amount of sun they have had. Then they are
@@ -62,12 +62,12 @@ function About() {
             separately and bottle them in elegant bottles.
           </p>
           <div
-            className="mx-auto aspect-[4/3] max-h-[600px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl lg:max-w-3xl lg:min-w-3xl lg:px-0"
+            className="mx-auto aspect-[4/3] max-h-[500px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl xl:mx-0 xl:max-h-[600px] xl:max-w-3xl xl:min-w-3xl xl:px-0"
             style={{ backgroundImage: `url(${img2})` }}
           ></div>
         </div>
 
-        <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 pt-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
+        <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 pt-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-10 2xl:max-w-5xl">
           As a refreshing drink for any time of day or night or an elegant
           accompaniment to the meal, the mountain apple juice offer a unique
           experience of oncomparable taste.
@@ -89,17 +89,17 @@ function About() {
           <br />
         </p>
 
-        <div className="w-full flex-row-reverse items-center gap-8 px-5 lg:flex lg:pt-10">
-          <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 pb-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 xl:text-3xl 2xl:max-w-5xl">
+        <div className="w-full flex-row-reverse items-center gap-8 px-5 xl:flex xl:pt-10">
+          <p className="font-secondary text-secondary mx-auto max-w-3xl px-3 pb-4 text-center text-xs font-light md:mt-4 md:text-lg lg:my-6 xl:text-3xl 2xl:max-w-5xl">
             <span className="text-primary font-medium">Thomas Kohl</span> is
-            Italys{" "}
+            Italy's{" "}
             <strong>
               <span className="text-primary font-medium">first</span>
             </strong>{" "}
             apple juice refiner.
           </p>
           <div
-            className="mx-auto aspect-[4/3] max-h-[600px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl lg:mx-0 lg:max-w-3xl lg:min-w-3xl lg:px-0"
+            className="mx-auto aspect-[4/3] max-h-[500px] w-full flex-[1] rounded-2xl bg-cover bg-bottom bg-no-repeat md:max-w-xl md:min-w-xl xl:mx-0 xl:max-h-[600px] xl:max-w-3xl xl:min-w-3xl xl:px-0"
             style={{ backgroundImage: `url(${img3})` }}
           ></div>
         </div>

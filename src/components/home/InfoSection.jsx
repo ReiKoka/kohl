@@ -39,12 +39,40 @@ function InfoSection() {
         <SingleInfographic
           icon={Champagne}
           title="Serve in a long-stemmed glass"
+          text="We recommand to use a long-stemmed glass for our juices, so 
+                that they can develop their complex aromas and flavours."
         />
-        <SingleInfographic icon={ForkKnife} title="Food pairings" />
-        <SingleInfographic icon={ThermometerCold} title="Enjoy it cool" />
-        <SingleInfographic icon={SlidersHorizontal} title="Sweet or Sour" />
-        <SingleInfographic icon={Plant} title="Vegan" />
-        <SingleInfographic icon={GrainsSlash} title="Gluten Free" />
+        <SingleInfographic
+          icon={ForkKnife}
+          title="Food pairings"
+          text="The perfect serving temperature is between 8 and 10°C."
+        />
+        <SingleInfographic
+          icon={ThermometerCold}
+          title="Enjoy it cool"
+          text="KOHL mountain apple juices are an elegant accompaniment to 
+your meal, for a perfect alcohol-free alternative."
+        />
+        <SingleInfographic
+          icon={SlidersHorizontal}
+          title="Sweet or Sour"
+          text="All our juices are divided in a sweet acid beam (etiquette) to create an 
+orientation to the customer and to facilitate to him his decision"
+        />
+        <SingleInfographic
+          icon={Plant}
+          title="Vegan"
+          text="They do not contain any animal-derived ingredients or genetically modified 
+products. Kohl mountain apple juices carry the V-label of the European Vegetarian 
+Union."
+        />
+        <SingleInfographic
+          icon={GrainsSlash}
+          title="Gluten Free"
+          text="They are free from gluten-containing grain, crustaceans, eggs, fish, earth‘s 
+nuts, soy, milk, bowl fruits like almonds and hazelnuts, celery, mustard, sesame seed, 
+sulphur dioxide and sulfites, lupins and molluscs and all products produced from it."
+        />
       </div>
     </section>
   );
