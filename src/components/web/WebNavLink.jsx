@@ -6,9 +6,9 @@ function WebNavLink({ to, title }) {
       <NavLink
         to={to}
         className={({ isActive }) =>
-          `relative font-secondary flex  gap-2 text-secondary py-2 px-4 text-center rounded-lg ${
+          `font-secondary text-secondary relative flex gap-2 rounded-lg px-4 py-2 text-center ${
             isActive
-              ? "text-secondary-content before:content-[''] before:absolute before:inset-0 before:bg-secondary before:rounded-lg before:-z-10"
+              ? "text-secondary-content before:bg-secondary before:absolute before:inset-0 before:-z-10 before:rounded-lg before:content-['']"
               : "text-secondary hover:bg-base-200"
           }`
         }

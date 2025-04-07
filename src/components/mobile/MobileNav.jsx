@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useOnClickOutside } from "usehooks-ts";
-import { Champagne, Cheers } from "@phosphor-icons/react";
+import { Cheers } from "@phosphor-icons/react";
 import { createPortal } from "react-dom";
 import { links } from "./../../utils/constants";
 import MobileNavLink from "./MobileNavLink";

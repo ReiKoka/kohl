@@ -1,4 +1,4 @@
-import cuvee from "../assets/images/cuvee.webp";
+import cuvee from "../../assets/images/cuvee.webp";
 
 function Cuvee() {
   return (

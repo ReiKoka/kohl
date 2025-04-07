@@ -1,11 +1,9 @@
-
-import InfoSection from "../components/InfoSection";
-import Footer from "./../components/Footer";
-import Gourmet from "../components/Gourmet";
-import Cuvee from "../components/Cuvee";
-import HowToUse from "../components/HowToUse";
-import HeroSection from "../components/HeroSection";
-
+import Footer from "../components/Footer";
+import Cuvee from "../components/home/Cuvee";
+import Gourmet from "../components/home/Gourmet";
+import HeroSection from "../components/home/HeroSection";
+import HowToUse from "../components/home/HowToUse";
+import InfoSection from "../components/home/InfoSection";
 
 function Home() {
   return (
@@ -16,7 +14,6 @@ function Home() {
         <Gourmet />
         <Cuvee />
         <HowToUse />
-        
         <Footer />
       </div>
     </div>

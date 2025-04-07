@@ -2,8 +2,9 @@ import { useMediaQuery } from "usehooks-ts";
 import { useNav } from "./../hooks/useNav";
 
 import MobileNav from "./mobile/MobileNav";
-import WebNav from "./WebNav";
+
 import { useNavigate } from "react-router";
+import WebNav from "./web/WebNav";
 
 function Nav() {
   const matches = useMediaQuery("(min-width: 1024px");

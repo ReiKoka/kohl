@@ -6,7 +6,7 @@ import {
   SlidersHorizontal,
   ThermometerCold,
 } from "@phosphor-icons/react";
-import SingleInfographic from "./ui/SingleInfographic";
+import SingleInfographic from "./SingleInfographic";
 
 function InfoSection() {
   return (
