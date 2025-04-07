@@ -58,8 +58,10 @@
   --font-secondary: var(--font-secondary);
 }
 
-.btn {
-  &:active:not(.btn-active) {
-    translate: 50% !important;
+@media screen and (min-width: 768px) {
+  .btn {
+    &:active:not(.btn-active) {
+      translate: 50% !important;
+    }
   }
 }

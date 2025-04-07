@@ -2,6 +2,7 @@ import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 
 import Autoplay from "embla-carousel-autoplay";
+import { useNavigate } from "react-router";
 
 const HeroCarousel = (props) => {
   const { slides, options } = props;
@@ -15,6 +16,8 @@ const HeroCarousel = (props) => {
     }),
   ]);
 
+  const navigate = useNavigate();
+
   return (
     <section className="embla">
       <div className="bg-base-content/40 pointer-events-none absolute inset-0 z-10">
@@ -23,7 +26,10 @@ const HeroCarousel = (props) => {
             The Apple Juice from the mountains
           </p>
         </div>
-        <button className="btn btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 md:btn-lg absolute right-5 bottom-5 rounded-full outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 md:right-1/2 md:translate-x-1/2">
+        <button
+          className="btn btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 md:btn-lg pointer-events-auto absolute right-5 bottom-5 rounded-full xl:btn-xl outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 md:right-1/2 md:translate-x-1/2"
+          onClick={() => navigate("/juices")}
+        >
           View Our Juices
         </button>
       </div>
