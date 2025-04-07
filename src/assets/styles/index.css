@@ -57,3 +57,9 @@
   --font-primary: "Satoshi-Variable", sans-serif;
   --font-secondary: var(--font-secondary);
 }
+
+.btn {
+  &:active:not(.btn-active) {
+    translate: 50% !important;
+  }
+}
