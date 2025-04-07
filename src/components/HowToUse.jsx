@@ -59,9 +59,9 @@ function HowToUse() {
   return (
     <div className="border-secondary/30 mt-8 flex w-full flex-col gap-8 border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
-        How to use our juices
+        How you can use our juices
       </h1>
-      <div className="h-auto aspect-video w-full">
+      <div className="h-[340px] md:h-full min-h-80 w-full">
         <HowToUseCarousel slides={slides} options={options} />
       </div>
     </div>

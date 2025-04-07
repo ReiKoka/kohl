@@ -17,8 +17,8 @@ function HeroSection() {
   return (
     <div className="relative h-full w-full bg-cover bg-bottom">
       <HeroCarousel slides={slides} options={options} />
-      <button className="btn btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 absolute right-5 bottom-5 rounded-full outline-0 focus-visible:ring-2 focus-visible:ring-offset-2">
-        View Products
+      <button className="btn btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 absolute right-5 bottom-5 rounded-full outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 md:btn-lg md:right-1/2 translate-x-1/2">
+        View Our Juices
       </button>
     </div>
   );

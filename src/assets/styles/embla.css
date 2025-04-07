@@ -24,6 +24,7 @@
   min-width: 0;
   padding-left: var(--slide-spacing);
   height: 100%;
+  min-height: 100%;
 }
 .embla__slide__number {
   background-size: cover;
@@ -31,4 +32,8 @@
   background-position: bottom;
   height: var(--slide-height);
   user-select: none;
+}
+
+.embla__slide__number.how__to__use {
+  height: 100%;
 }
