@@ -15,7 +15,7 @@ function Gourmet() {
           apple juices, from sweet to slightly acidic – that is our GOURMET
           line.
         </p>
-        <img src={gourmet} alt="gourmet-category-picture" className="w-full mb-8" />
+        <img src={gourmet} alt="gourmet-category-picture" className="w-full mb-8 max-w-3xl mx-auto" />
       </div>
     </div>
   );

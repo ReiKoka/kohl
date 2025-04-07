@@ -2,7 +2,7 @@ import cuvee from "../assets/images/cuvee.webp";
 
 function Cuvee() {
   return (
-    <div className="w-full md:p-8 lg:px-8 mt-8 lg:py-12 border-b border-secondary/30">
+    <div className="border-secondary/30 mt-8 w-full border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
         Cuvee
       </h1>
@@ -14,7 +14,11 @@ function Cuvee() {
           with extracts of herbs and flowers. Heavenly combinations – for
           earthly pleasures.
         </p>
-        <img src={cuvee} alt="gourmet-category-picture" className="w-full mb-8" />
+        <img
+          src={cuvee}
+          alt="gourmet-category-picture"
+          className="mx-auto mb-8 w-full max-w-3xl"
+        />
       </div>
     </div>
   );
