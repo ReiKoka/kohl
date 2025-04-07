@@ -14,8 +14,10 @@ const options = { loop: true };
 
 function HeroSection() {
   return (
-    <div className="relative h-full w-full bg-cover bg-bottom">
-      <HeroCarousel slides={slides} options={options} />
+    <div className="h-2/5 md:portrait:h-1/2 sm:landscape:h-full lg:landscape:h-full">
+      <div className="relative h-full w-full bg-cover bg-bottom">
+        <HeroCarousel slides={slides} options={options} />
+      </div>
     </div>
   );
 }

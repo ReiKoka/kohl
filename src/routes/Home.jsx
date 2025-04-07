@@ -7,15 +7,13 @@ import InfoSection from "../components/home/InfoSection";
 
 function Home() {
   return (
-    <div className="font-secondary h-2/5 md:portrait:h-1/2 sm:landscape:h-full lg:landscape:h-full">
-      <div className="h-full">
-        <HeroSection />
-        <InfoSection />
-        <Gourmet />
-        <Cuvee />
-        <HowToUse />
-        <Footer />
-      </div>
+    <div className="font-secondary h-full">
+      <HeroSection />
+      <InfoSection />
+      <Gourmet />
+      <Cuvee />
+      <HowToUse />
+      <Footer />
     </div>
   );
 }
