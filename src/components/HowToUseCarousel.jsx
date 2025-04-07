@@ -32,14 +32,6 @@ const HowToUseCarousel = (props) => {
                       alt=""
                       className="h-full w-full object-cover md:aspect-video md:rounded-t-3xl"
                     />
-                    <CarouselPrevButton
-                      onClick={onPrevButtonClick}
-                      disabled={prevBtnDisabled}
-                    />
-                    <CarouselNextButton
-                      onClick={onNextButtonClick}
-                      disabled={nextBtnDisabled}
-                    />
                   </div>
                   <p className="bg-base-content text-secondary flex w-full flex-1/4 grow items-center justify-center p-4 text-center text-sm md:rounded-b-3xl">
                     <span>{slide.text}</span>
@@ -49,6 +41,14 @@ const HowToUseCarousel = (props) => {
             </div>
           ))}
         </div>
+        <CarouselPrevButton
+          onClick={onPrevButtonClick}
+          disabled={prevBtnDisabled}
+        />
+        <CarouselNextButton
+          onClick={onNextButtonClick}
+          disabled={nextBtnDisabled}
+        />
       </div>
     </section>
   );
