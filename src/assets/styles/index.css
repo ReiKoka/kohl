@@ -59,7 +59,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .btn {
+  .btn.custom {
     &:active:not(.btn-active) {
       translate: 50% !important;
     }

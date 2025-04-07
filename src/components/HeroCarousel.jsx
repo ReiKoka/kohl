@@ -27,7 +27,7 @@ const HeroCarousel = (props) => {
           </p>
         </div>
         <button
-          className="btn btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 md:btn-lg pointer-events-auto absolute right-5 bottom-5 rounded-full xl:btn-xl outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 md:right-1/2 md:translate-x-1/2"
+          className="btn custom btn-primary font-primary focus-visible:ring-primary btn-sm ring-offset-base-300 md:btn-lg pointer-events-auto absolute right-5 bottom-5 rounded-full xl:btn-xl outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 md:right-1/2 md:translate-x-1/2"
           onClick={() => navigate("/juices")}
         >
           View Our Juices

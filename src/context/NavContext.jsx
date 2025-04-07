@@ -1,4 +1,10 @@
-import { createContext, useEffect, useRef, useState, useCallback } from "react";
+import {
+  createContext,
+  useRef,
+  useState,
+  useCallback,
+  useLayoutEffect,
+} from "react";
 
 const NavContext = createContext();
 
@@ -12,7 +18,7 @@ export const NavProvider = ({ children }) => {
     }
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const node = navRef.current;
     if (!node) {
       return;
