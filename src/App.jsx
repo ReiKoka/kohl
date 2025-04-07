@@ -24,6 +24,10 @@ function App() {
           element: <Juices />,
         },
         {
+          path: "/juices/:productName",
+          element: <Juices />,
+        },
+        {
           path: "/cart",
           element: <Cart />,
         },
