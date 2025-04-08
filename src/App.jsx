@@ -4,6 +4,7 @@ import About from "./routes/About";
 import Juices from "./routes/Juices";
 import Cart from "./routes/Cart";
 import AppLayout from "./routes/AppLayout";
+import Juice from "./components/juices/Juice";
 
 function App() {
   const router = createBrowserRouter([
@@ -25,7 +26,7 @@ function App() {
         },
         {
           path: "/juices/:productName",
-          element: <Juices />,
+          element: <Juice />,
         },
         {
           path: "/cart",
