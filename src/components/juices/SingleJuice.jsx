@@ -1,11 +1,25 @@
 import { Plus, PlusCircle } from "@phosphor-icons/react";
 import clsx from "clsx";
-import { formatPriceALL } from "../../utils/helpers";
 import { useMediaQuery } from "usehooks-ts";
 import { useNavigate } from "react-router";
+import { useCart } from "../../hooks/useCart";
+import { toast } from "react-toastify";
 
 function SingleJuice({ product }) {
+  const { setCart } = useCart();
   const matches = useMediaQuery("(min-width: 768px");
+
+  const notify = () =>
+    toast.success("Added to Cart!", {
+      position: "bottom-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
 
   const totalCircles = 5;
 
@@ -29,7 +43,7 @@ function SingleJuice({ product }) {
       <img
         src={product.image}
         alt={product.name}
-        className="-ml-6 w-36 md:ml-0 lg:w-40 "
+        className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
         <h6 className="text-base font-thin capitalize md:text-lg">
@@ -62,12 +76,26 @@ function SingleJuice({ product }) {
           <p>sweetness</p>
         </div>
 
-        <div className="mt-auto flex items-end justify-between">
-          <p className="font-secondary text-base font-medium md:text-lg">
-            {formatPriceALL(product.price)}
-          </p>
+        <div className="mt-auto flex items-end justify-end">
           <button
             className={`btn btn-primary btn-sm font-primary focus-visible:ring-primary flex items-center gap-2 outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 ${matches ? "" : "btn-circle rounded-full"}`}
+            onClick={(e) => {
+              e.stopPropagation();
+              setCart((prev) => {
+                const existingProduct = prev.find(
+                  (item) => item.id === product.id,
+                );
+                if (existingProduct) {
+                  return prev.map((item) =>
+                    item.id === product.id
+                      ? { ...item, quantity: item.quantity + 1 }
+                      : item,
+                  );
+                }
+                return [...prev, { ...product, quantity: 1 }];
+              });
+              notify();
+            }}
           >
             {matches ? (
               <>
