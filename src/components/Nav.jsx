@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import WebNav from "./web/WebNav";
 
 function Nav() {
-  const matches = useMediaQuery("(min-width: 1024px");
+  const matches = useMediaQuery("(min-width: 576px");
   const { navRef } = useNav();
   const navigate = useNavigate();
 

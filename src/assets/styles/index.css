@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@plugin "daisyui";
 @import "tailwindcss-animated";
+@plugin "daisyui";
 
 @font-face {
   font-family: "Satoshi-Variable";
