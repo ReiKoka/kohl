@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { useCart } from "../../hooks/useCart";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 export const Form = () => {
-  const { cart } = useCart();
+  const { cart, setCart } = useCart();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: "",
     surname: "",
@@ -18,45 +20,52 @@ export const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const templateParams = {
-      name: formData.name,
-      surname: formData.surname,
-      email: formData.email,
-      cart_items: cart
-        .map((item) => `${item.primaryName} x${item.quantity}`)
-        .join(", "),
-    };
+    // const templateParams = {
+    //   name: formData.name,
+    //   surname: formData.surname,
+    //   email: formData.email,
+    //   cart_items: cart
+    //     .map((item) => `${item.primaryName} x${item.quantity}`)
+    //     .join(", "),
+    // };
 
-    try {
-      await emailjs.send(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
-        templateParams,
-        "YOUR_PUBLIC_KEY",
-      );
-      toast.success("Reserved Successfully, we''l be in touch shortly!", {
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (error) {
-      console.error("Email sending failed:", error);
-      toast.error("Something Went Wrong!", {
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
+    // try {
+    //   await emailjs.send(
+    //     "YOUR_SERVICE_ID",
+    //     "YOUR_TEMPLATE_ID",
+    //     templateParams,
+    //     "YOUR_PUBLIC_KEY",
+    //   );
+    //   toast.success("Reserved Successfully, we''l be in touch shortly!", {
+    //     position: "bottom-center",
+    //     autoClose: 1500,
+    //     hideProgressBar: false,
+    //     closeOnClick: false,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "light",
+    //   });
+    //   navigate("/");
+    //   setCart([]);
+    //   setFormData({
+    //     name: "",
+    //     surname: "",
+    //     email: "",
+    //   });
+    // } catch (error) {
+    //   console.error("Email sending failed:", error);
+    //   toast.error("Something Went Wrong!", {
+    //     position: "bottom-center",
+    //     autoClose: 1500,
+    //     hideProgressBar: false,
+    //     closeOnClick: false,
+    //     pauseOnHover: true,
+    //     draggable: true,
+    //     progress: undefined,
+    //     theme: "light",
+    //   });
+    // }
   };
 
   return (
