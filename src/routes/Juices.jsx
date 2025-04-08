@@ -1,4 +1,5 @@
 import Footer from "../components/Footer";
+import JuiceModal from "../components/juices/JuiceModal";
 import SingleJuice from "../components/juices/SingleJuice";
 import productsData from "../db/data.json";
 
@@ -17,6 +18,7 @@ function Juices() {
               <SingleJuice key={product.id} product={product} />
             ))}
         </div>
+        <JuiceModal />
       </div>
       <Footer />
     </>

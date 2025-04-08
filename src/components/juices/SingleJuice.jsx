@@ -2,9 +2,12 @@ import { Plus, PlusCircle } from "@phosphor-icons/react";
 import clsx from "clsx";
 import { formatPriceALL } from "../../utils/helpers";
 import { useMediaQuery } from "usehooks-ts";
+import useModal from "../../hooks/useModal";
+import { JUICE_MODAL_TYPE } from "./JuiceModal";
 
 function SingleJuice({ product }) {
   const matches = useMediaQuery("(min-width: 768px");
+  const { openModal } = useModal();
 
   const totalCircles = 5;
 
@@ -14,8 +17,16 @@ function SingleJuice({ product }) {
     Math.min(product.aciditySweetnessRatio || 1, totalCircles),
   );
 
+  const handleOpenModal = (e) => {
+    e.stopPropagation();
+    openModal(JUICE_MODAL_TYPE, { product });
+  };
+
   return (
-    <div className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95">
+    <div
+      className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95"
+      onClick={handleOpenModal}
+    >
       <div className="badge badge-primary md:badge-lg absolute top-0 right-0 min-w-24 capitalize md:top-2 md:right-2 md:rounded-lg">
         {product.category}
       </div>
