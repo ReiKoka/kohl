@@ -14,6 +14,7 @@
       "image": "https://www.kohl.bz.it/thumbnail/9d/bd/11/1739434551/6_jonagold-750_1920x1920.webp",
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "aciditySweetnessRatio": 5,
+      "price": 1000,
       "features": [
         "100% single variety apple juice",
         "soft and elegant",
@@ -24,17 +25,18 @@
 
     {
       "id": 2,
-      "primaryName": "& mandarin",
+      "primaryName": "mandarin",
       "secondaryName": "Mountain apple juice",
       "category": "cuvée",
-      "subtitle": "This cuvée combines the flavours of North and South ",
+      "subtitle": "This cuvée combines the flavours of North and South",
       "descriptionMain": "aromatic, fresh with an intriguing interplay of sweet and sour, persistent finish",
       "descriptionSub": "Ciaculli mandarins ripened under the blue skies of Sicily and apples from our orchard kissed by the mountain sun. The distinctive mountain apple juice gives the cuvée its structure, while the aromatic mandarin dances on the palate with sweet and sour flavour notes.",
       "servingTemperature": [8, 10],
-      "foodPairing": "with summer salads, vegetarian dishes, shellfish and crustaceans, cakes & pastries.",
+      "foodPairing": "with summer salads, vegetarian dishes, shellfish and crustaceans, cakes pastries.",
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/fc/b8/c9/1739434670/8_mandarino-750_1920x1920.webp",
       "aciditySweetnessRatio": 2,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
@@ -47,9 +49,9 @@
 
     {
       "id": 3,
-      "primaryName": "& apricot",
+      "primaryName": "apricot",
       "secondaryName": "Mountain apple juice",
-      "category": "cuvee",
+      "category": "cuvée",
       "subtitle": "A Midsummer Night’s Dream! ",
       "descriptionMain": "intensive fruit, velvety structure, noble and long finish",
       "descriptionSub": "In this cuvée, the sweet-sour aroma of the apricots enters into a dialogue with the sunny sweetness of the mountain apples. The well-balanced mixture ensures perfect aroma development for both of the protagonists. The velvety apricot juice defines the overall mouthfeel; the delicate aroma of the apple juice delivers the refreshment potential.",
@@ -58,6 +60,7 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/70/d2/28/1739434713/9_albicocca-750_1920x1920.webp",
       "aciditySweetnessRatio": 2,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
@@ -70,9 +73,9 @@
 
     {
       "id": 4,
-      "primaryName": "& wild blueberry",
+      "primaryName": "wild blueberry",
       "secondaryName": "Mountain apple juice",
-      "category": "cuvee",
+      "category": "cuvée",
       "subtitle": "A child of the mountains! ",
       "descriptionMain": "purple-violet, mountain and forest aromas, mild on the palate, slight sweetness",
       "descriptionSub": "The midnight blue, highly aromatic wild blueberry juice added to our mountain apple juice creates this characterful, deep purple violet cuvée. The forest notes of the blueberries are perfectly integrated into the sweet aroma structures of the apple juice, resulting in a smooth and velvety mouthfeel with a strong presence.",
@@ -81,6 +84,7 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/fd/d0/4f/1739434786/mirtillo%20selvatico_750ml_1920x1920.webp",
       "aciditySweetnessRatio": 3,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
@@ -93,17 +97,18 @@
 
     {
       "id": 5,
-      "primaryName": "& peach",
+      "primaryName": "peach",
       "secondaryName": "Mountain apple juice",
-      "category": "cuvee",
+      "category": "cuvée",
       "subtitle": "Summer Loving! ",
       "descriptionMain": "ripe, full aroma, slight sweetness, velvety mouthfeel",
       "descriptionSub": "The sweet yellow juice of the peaches and the acidic juice of the late summer mountain apples complement each other perfectly. This lively cuvée has a wonderful flowery fragrance and a multi-layered bouquet of fruity aromas. The peach juice defines the texture: the velvety mouthfeel, the fullness on the palate and the lingering aftertaste.",
       "servingTemperature": [8, 10],
       "foodPairing": "with chocolate mousse, cakes, strudel, hard cheeses.",
       "content": [200, 750],
-      "image": "The sweet yellow juice of the peaches and the acidic juice of the late summer mountain apples complement each other perfectly. This lively cuvée has a wonderful flowery fragrance and a multi-layered bouquet of fruity aromas. The peach juice defines the texture: the velvety mouthfeel, the fullness on the palate and the lingering aftertaste.",
+      "image": "https://www.kohl.bz.it/thumbnail/4a/de/70/1739434849/14_pesca-750_1920x1920.webp",
       "aciditySweetnessRatio": 3,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
@@ -116,9 +121,9 @@
 
     {
       "id": 6,
-      "primaryName": "& pear",
+      "primaryName": "pear",
       "secondaryName": "Mountain apple juice",
-      "category": "cuvee",
+      "category": "cuvée",
       "subtitle": "Two of a kind!",
       "descriptionMain": "elegant aromas, smooth and sweet, velvety, very long and rounded finish",
       "descriptionSub": "The flawless elegance of this cuvée originates in our sun-ripened mountain apples. With their clear texture and fresh acidity, they create a smooth base for the pears. The velvety, light-yellow juice brings a sweet and delicate pear aroma to the nose and leads to a sappy, complex and full palate.",
@@ -127,6 +132,7 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/3c/85/8b/1739434911/16_pera-750_1920x1920.webp",
       "aciditySweetnessRatio": 5,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
@@ -139,9 +145,9 @@
 
     {
       "id": 7,
-      "primaryName": "& carrot",
+      "primaryName": "carrot",
       "secondaryName": "Mountain apple juice",
-      "category": "cuvee",
+      "category": "cuvée",
       "subtitle": "Like day and Night! ",
       "descriptionMain": "earthy, nutty, sweet with a fine acidity, medium-long finish",
       "descriptionSub": "There are worlds between them: our apples grow on the trees, needing the sun and the wind; the carrots grow under the earth, where it is dark and moist. Together they form a sublime, bright orange cuvée in perfectly balanced proportions: the apple’s fine acidity complements the earthy flavour of the carrots, whilst the sweet notes from both keep the contrasts in balance and ensure great drinking pleasure.",
@@ -150,6 +156,7 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/93/64/d6/1739874891/17_carota-750_1920x1920.webp",
       "aciditySweetnessRatio": 5,
+      "price": 1000,
       "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",

@@ -1,6 +1,7 @@
 import { Outlet } from "react-router";
 import Nav from "../components/Nav";
 import { useNav } from "../hooks/useNav";
+import Footer from "./../components/Footer";
 
 function AppLayout() {
   const { navHeight } = useNav();
