@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "id": 1,
       "primaryName": "jonagold",
       "secondaryName": "Mountain apple juice",
       "category": "gourmet",
@@ -11,17 +12,18 @@
       "foodPairing": "with hors d’oeuvres with cream cheese, flavoursome risottos, roasts, cakes,  patisseries.",
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/9d/bd/11/1739434551/6_jonagold-750_1920x1920.webp",
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "aciditySweetnessRatio": 5,
       "features": [
         "100% single variety apple juice",
         "soft and elegant",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 2,
       "primaryName": "& mandarin",
       "secondaryName": "Mountain apple juice",
       "category": "cuvée",
@@ -33,17 +35,18 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/fc/b8/c9/1739434670/8_mandarino-750_1920x1920.webp",
       "aciditySweetnessRatio": 2,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 3,
       "primaryName": "& apricot",
       "secondaryName": "Mountain apple juice",
       "category": "cuvee",
@@ -55,17 +58,18 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/70/d2/28/1739434713/9_albicocca-750_1920x1920.webp",
       "aciditySweetnessRatio": 2,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 4,
       "primaryName": "& wild blueberry",
       "secondaryName": "Mountain apple juice",
       "category": "cuvee",
@@ -77,17 +81,18 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/fd/d0/4f/1739434786/mirtillo%20selvatico_750ml_1920x1920.webp",
       "aciditySweetnessRatio": 3,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 5,
       "primaryName": "& peach",
       "secondaryName": "Mountain apple juice",
       "category": "cuvee",
@@ -99,17 +104,18 @@
       "content": [200, 750],
       "image": "The sweet yellow juice of the peaches and the acidic juice of the late summer mountain apples complement each other perfectly. This lively cuvée has a wonderful flowery fragrance and a multi-layered bouquet of fruity aromas. The peach juice defines the texture: the velvety mouthfeel, the fullness on the palate and the lingering aftertaste.",
       "aciditySweetnessRatio": 3,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 6,
       "primaryName": "& pear",
       "secondaryName": "Mountain apple juice",
       "category": "cuvee",
@@ -121,17 +127,18 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/3c/85/8b/1739434911/16_pera-750_1920x1920.webp",
       "aciditySweetnessRatio": 5,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     },
 
     {
+      "id": 7,
       "primaryName": "& carrot",
       "secondaryName": "Mountain apple juice",
       "category": "cuvee",
@@ -143,14 +150,14 @@
       "content": [200, 750],
       "image": "https://www.kohl.bz.it/thumbnail/93/64/d6/1739874891/17_carota-750_1920x1920.webp",
       "aciditySweetnessRatio": 5,
+      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days",
       "features": [
         "100% natural juice",
         "no added sugar",
         "no additives",
         "vegan",
         "gluten free"
-      ],
-      "directionsOfUse": "Shake before use. Once opened, store in the refigerator and consume within 6 days"
+      ]
     }
   ]
 }
