@@ -2,7 +2,6 @@ import { Plus, PlusCircle } from "@phosphor-icons/react";
 import clsx from "clsx";
 import { formatPriceALL } from "../../utils/helpers";
 import { useMediaQuery } from "usehooks-ts";
-import { useNavigate } from "react-router";
 
 function SingleJuice({ product }) {
   const matches = useMediaQuery("(min-width: 768px");
@@ -15,13 +14,8 @@ function SingleJuice({ product }) {
     Math.min(product.aciditySweetnessRatio || 1, totalCircles),
   );
 
-  const navigate = useNavigate();
-
   return (
-    <div
-      className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95"
-      onClick={() => navigate(`/juices/${product.primaryName}`)}
-    >
+    <div className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95">
       <div className="badge badge-primary md:badge-lg absolute top-0 right-0 min-w-24 capitalize md:top-2 md:right-2 md:rounded-lg">
         {product.category}
       </div>
@@ -29,7 +23,7 @@ function SingleJuice({ product }) {
       <img
         src={product.image}
         alt={product.name}
-        className="-ml-6 w-36 md:ml-0 lg:w-40 "
+        className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
         <h6 className="text-base font-thin capitalize md:text-lg">
@@ -71,11 +65,11 @@ function SingleJuice({ product }) {
           >
             {matches ? (
               <>
-                <PlusCircle size={18} />
+                <PlusCircle className="h-5 w-5 md:h-6 md:w-6" />
                 <span>Add to Cart </span>
               </>
             ) : (
-              <Plus size={18} />
+              <Plus className="h-5 w-5 md:h-6 md:w-6" />
             )}
           </button>
         </div>

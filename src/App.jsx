@@ -24,10 +24,7 @@ function App() {
           path: "/juices",
           element: <Juices />,
         },
-        {
-          path: "/juices/:productName",
-          element: <Juice />,
-        },
+
         {
           path: "/cart",
           element: <Cart />,
