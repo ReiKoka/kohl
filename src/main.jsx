@@ -5,15 +5,12 @@ import "./assets/styles/embla.css";
 import App from "./App.jsx";
 import { NavProvider } from "./context/NavContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
-import { ModalProvider } from "./context/ModalContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <NavProvider>
       <CartProvider>
-        <ModalProvider>
-          <App />
-        </ModalProvider>
+        <App />
       </CartProvider>
     </NavProvider>
   </StrictMode>,
