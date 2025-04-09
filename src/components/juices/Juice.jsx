@@ -3,7 +3,6 @@ import productsData from "../../db/data.json";
 import Loader from "../ui/Loader";
 import JuiceCarousel from "./JuiceCarousel";
 import { normalizeString } from "../../utils/helpers";
-import { Check } from "@phosphor-icons/react";
 import JuiceTitles from "./ui/JuiceTitles";
 import JuiceDescription from "./ui/JuiceDescription";
 import JuiceAcidityRatio from "./ui/JuiceAcidityRatio";

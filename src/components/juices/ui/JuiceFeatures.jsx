@@ -1,3 +1,5 @@
+import { Check } from "@phosphor-icons/react";
+
 function JuiceFeatures({product}) {
   return (
     <ul className="my-4 flex w-full flex-wrap justify-center gap-2">
