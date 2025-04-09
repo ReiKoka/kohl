@@ -8,6 +8,12 @@
   position: relative;
 }
 
+.embla-juice {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .embla__viewport {
   overflow: hidden;
   height: 100%;
@@ -61,7 +67,7 @@
   .embla-juice {
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 
   .embla-thumbs {

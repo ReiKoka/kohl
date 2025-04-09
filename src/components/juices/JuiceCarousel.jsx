@@ -1,11 +1,20 @@
 import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./JuiceCarouselThumbsButton";
+import Autoplay from "embla-carousel-autoplay";
 
 const JuiceCarousel = (props) => {
   const { slides, options } = props;
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
+  const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options, [
+    Autoplay({
+      playOnInit: true,
+      autoplay: true,
+      delay: 15000,
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+    }),
+  ]);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
     containScroll: "keepSnaps",
     dragFree: true,
@@ -42,7 +51,7 @@ const JuiceCarousel = (props) => {
                 <img
                   src={slide}
                   alt=""
-                  className="mx-auto h-full object-cover"
+                  className="mx-auto h-full rounded-b-xl object-cover md:rounded-xl"
                 />
               </div>
             </div>

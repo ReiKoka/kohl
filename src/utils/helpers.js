@@ -19,3 +19,13 @@ export function formatPriceALL(price, options = {}) {
     return `${price.toFixed(decimals)} Lek`;
   }
 }
+
+export const normalizeString = (inputString) => {
+
+  if (typeof inputString !== "string") {
+    console.error("Invalid input: Expected a string.");
+    return "";
+  }
+
+  return inputString.replace(/%20| /g, "");
+};
