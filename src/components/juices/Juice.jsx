@@ -16,6 +16,8 @@ function Juice() {
 
   if (!product) return <Loader />;
 
+  console.log(product);
+
   // Slider
   const slides = product.images;
   const options = { loop: true };
@@ -35,12 +37,12 @@ function Juice() {
 
       <div className="font-secondary lg:bg-base-200 border-secondary h-full grow px-4 pt-2 pb-4 md:h-fit md:rounded-xl lg:m-4 lg:border">
         {/* Secondary Title */}
-        <h6 className="text-center text-base font-thin capitalize md:text-lg lg:text-left">
+        <h6 className="text-center text-lg font-thin capitalize md:text-lg lg:text-left">
           {product.secondaryName}
         </h6>
 
         {/* Primary Title */}
-        <h4 className="text-secondary text-center text-xl font-medium capitalize md:text-2xl lg:text-left">
+        <h4 className="text-secondary text-center text-2xl font-semibold capitalize md:text-3xl lg:text-left">
           {product.primaryName}
         </h4>
 
@@ -51,7 +53,7 @@ function Juice() {
 
         {/* Description */}
         <p className="font-secondary text-secondary my-4 text-center text-xs text-balance lg:text-left lg:text-wrap">
-          {product.descriptionSub}
+          {product.descriptionMain}
         </p>
 
         {/* Acidity Ratio */}
@@ -76,7 +78,8 @@ function Juice() {
           <p>sweetness</p>
         </div>
 
-        <ul className="my-4 flex w-full flex-wrap gap-2 justify-center">
+        {/* Features */}
+        <ul className="my-4 flex w-full flex-wrap justify-center gap-2">
           {product.features.map((feature, index) => (
             <li
               className={`badge badge-outline badge-neutral flex w-fit justify-start text-xs`}
@@ -86,6 +89,35 @@ function Juice() {
             </li>
           ))}
         </ul>
+
+        {/* Accordion */}
+        <div className="join join-vertical border-secondary rounded-lg border">
+          <div className="collapse-arrow join-item collapse">
+            <input type="radio" name="my-accordion-4" defaultChecked />
+            <div className="collapse-title font-semibold">Description</div>
+            <div className="collapse-content text-xs">
+              {product.descriptionSub}
+            </div>
+          </div>
+          <div className="collapse-arrow join-item border-base-300 collapse">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title focus-within::text-primary font-semibold">
+              Highly recommended:
+            </div>
+            <div className="collapse-content text-xs">
+              {product.foodPairing}
+            </div>
+          </div>
+          <div className="collapse-arrow join-item border-base-300 collapse">
+            <input type="radio" name="my-accordion-4" />
+            <div className="collapse-title font-semibold">
+              Directions of use
+            </div>
+            <div className="collapse-content text-sm">
+              {product.directionsOfUse}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
