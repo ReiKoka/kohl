@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router";
 import { useCart } from "../hooks/useCart";
-import clsx from "clsx";
-import Footer from "../components/Footer";
+
 import { Table } from "../components/table";
 import { Form } from "../components/form";
 

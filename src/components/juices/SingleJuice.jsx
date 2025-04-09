@@ -2,7 +2,7 @@ import { Plus, PlusCircle } from "@phosphor-icons/react";
 import clsx from "clsx";
 import { useMediaQuery } from "usehooks-ts";
 import { useNavigate } from "react-router";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 import { useCart } from "../../hooks/useCart";
 
 function SingleJuice({ product }) {
@@ -40,7 +40,7 @@ function SingleJuice({ product }) {
       </div>
 
       <img
-        src={product.image}
+        src={product.images[0]}
         alt={product.name}
         className="-ml-6 w-36 md:ml-0 lg:w-40"
       />

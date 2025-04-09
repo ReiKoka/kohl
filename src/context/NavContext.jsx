@@ -1,3 +1,4 @@
+// src/contexts/NavContext.jsx (Ensure it looks like this)
 import {
   createContext,
   useRef,
@@ -14,24 +15,28 @@ export const NavProvider = ({ children }) => {
 
   const updateHeight = useCallback((observedElement) => {
     if (observedElement) {
-      setNavHeight(observedElement.offsetHeight);
+      const currentHeight = observedElement.offsetHeight;
+      if (currentHeight > 0) {
+        setNavHeight(currentHeight);
+      }
     }
   }, []);
 
   useLayoutEffect(() => {
     const node = navRef.current;
-    if (!node) {
-      return;
-    }
+    if (!node) return;
 
     updateHeight(node);
 
     const observer = new ResizeObserver((entries) => {
       const entry = entries[0];
-      if (entry) {
-        updateHeight(entry.target);
+      if (entry?.target) {
+        window.requestAnimationFrame(() => {
+          updateHeight(entry.target);
+        });
       }
     });
+
     observer.observe(node);
 
     return () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { usePrevNextButtons } from "../EmblaCarouselArrowButtons";
+import { usePrevNextButtons } from "../ui/EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import { CarouselPrevButton } from "../ui/CarouselPrevButton";
 import { CarouselNextButton } from "../ui/CarouselNextButton";
