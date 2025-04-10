@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./JuiceCarouselThumbsButton";
 import Autoplay from "embla-carousel-autoplay";
-import { handleImageLoad } from "../../utils/helpers";
+import { handleImageLoad } from "./../../utils/helpers";
 
 const JuiceCarousel = (props) => {
   const { slides, options } = props;
