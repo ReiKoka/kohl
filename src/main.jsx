@@ -5,14 +5,14 @@ import "./assets/styles/embla.css";
 import App from "./App.jsx";
 import { NavProvider } from "./context/NavContext.jsx";
 import { CartProvider } from "./context/CartContext.jsx";
-import { ToastContainer } from "react-toastify";
+import { Toaster } from "sonner";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <NavProvider>
       <CartProvider>
         <App />
-        <ToastContainer />
+        <Toaster />
       </CartProvider>
     </NavProvider>
   </StrictMode>,

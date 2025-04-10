@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { useCart } from "../../hooks/useCart";
-import { toast } from "react-toastify";
+
 import { useNavigate } from "react-router";
+import { toast } from "sonner";
 
 export const Form = () => {
   const { cart, setCart } = useCart();
@@ -36,16 +37,7 @@ export const Form = () => {
         templateParams,
         "JGYLDUx9juiD26eMC",
       );
-      toast.success("Reserved Successfully, we''l be in touch shortly!", {
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.success("Reserved Successfully, we''l be in touch shortly!");
       navigate("/");
       setCart([]);
       setFormData({
@@ -55,16 +47,7 @@ export const Form = () => {
       });
     } catch (error) {
       console.error("Email sending failed:", error);
-      toast.error("Something Went Wrong!", {
-        position: "bottom-center",
-        autoClose: 1500,
-        hideProgressBar: false,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.error("Something Went Wrong!");
     }
   };
 
