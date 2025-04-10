@@ -41,21 +41,53 @@ const JuiceCarousel = (props) => {
     emblaMainApi.on("select", onSelect).on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
+  const [imageAspectRatios, setImageAspectRatios] = useState({});
+
+  const handleImageLoad = (event, index) => {
+    const img = event.target;
+    const { naturalWidth, naturalHeight } = img;
+
+    let aspectRatioType = "square"; // Default to square
+    if (naturalHeight > naturalWidth) {
+      aspectRatioType = "portrait";
+    } else if (naturalWidth > naturalHeight) {
+      aspectRatioType = "landscape";
+    }
+
+    // Update state using the functional form to avoid potential race conditions
+    setImageAspectRatios((prevRatios) => ({
+      ...prevRatios,
+      [index]: aspectRatioType, // Store the type for this specific image index
+    }));
+  };
+
   return (
     <div className="embla embla-juice">
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
-          {slides.map((slide, index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <img
-                  src={slide}
-                  alt=""
-                  className="mx-auto h-full rounded-b-xl object-cover md:rounded-xl "
-                />
+          {slides.map((slide, index) => {
+            let dimensionClass = ""; // Start with no dimension class
+            const aspectRatio = imageAspectRatios[index];
+
+            if (aspectRatio === "portrait") {
+              dimensionClass = "h-full";
+            } else if (aspectRatio === "landscape") {
+              // Apply w-full for landscape and square images
+              dimensionClass = "w-full";
+            }
+            return (
+              <div className="embla__slide" key={index}>
+                <div className="embla__slide__number">
+                  <img
+                    src={slide}
+                    alt={`Slide ${index + 1}`}
+                    onLoad={(event) => handleImageLoad(event, index)}
+                    className={`mx-auto h-full rounded-b-xl object-cover md:rounded-xl ${dimensionClass}`}
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

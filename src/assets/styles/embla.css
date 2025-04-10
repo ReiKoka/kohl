@@ -17,7 +17,6 @@
 .embla__viewport {
   overflow: hidden;
   height: 100%;
-  border-radius: var(--radius-xl);
 }
 .embla__container {
   display: flex;
@@ -96,7 +95,7 @@
     gap: 8px;
   }
 
-  /* .embla__viewport {
-    box-shadow: var(--shadow-custom);
-  } */
+  .embla__viewport {
+    border-radius: var(--radius-xl);
+  }
 }
