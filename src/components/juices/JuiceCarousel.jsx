@@ -51,7 +51,7 @@ const JuiceCarousel = (props) => {
                 <img
                   src={slide}
                   alt=""
-                  className="mx-auto h-full rounded-b-xl object-cover md:rounded-xl"
+                  className="mx-auto h-full  object-cover  "
                 />
               </div>
             </div>

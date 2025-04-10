@@ -6,7 +6,7 @@ function JuiceFeatures({ product }) {
       {product.features.map((feature, index) => (
         <li
           key={index}
-          className={`badge badge-outline border-secondary badge-neutral font-primary flex w-fit justify-start text-xs font-medium capitalize md:w-full md:border-0`}
+          className={`badge badge-outline border-secondary badge-neutral font-primary flex w-fit justify-start text-xs font-medium capitalize md:w-full md:border-0 lg:px-0`}
         >
           <Check className="fill-primary h-4 w-4" />
           <p>{feature}</p>
