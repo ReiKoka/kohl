@@ -29,7 +29,7 @@ function Juice() {
         <JuiceCarousel slides={slides} options={options} />
       </div>
 
-      <div className="font-secondary lg:shadow-custom relative h-full grow px-4 pb-4 md:h-fit md:rounded-xl lg:row-span-3 lg:row-start-1 lg:h-full lg:p-4">
+      <div className="font-secondary lg:shadow-custom relative h-full grow px-4 pb-4 md:mt-4 md:rounded-xl lg:row-span-3 lg:row-start-1 lg:mt-0 lg:h-full lg:p-4">
         <JuiceTitles product={product} />
         <JuiceDescription product={product} />
         <JuiceAcidityRatio product={product} />
