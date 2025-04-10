@@ -16,7 +16,7 @@ export const Thumb = (props) => {
         <img
           src={slide}
           alt={`img-${index + 1}`}
-          className={`border-secondary ${selected ? "shadow-custom shadow-secondary animate-jump animate-once" : ""} rounded-lg border ${index === 0 ? "ml-auto aspect-auto max-h-16 md:max-h-22 xl:max-h-26 2xl:max-h-30" : "h-16 md:h-22 xl:h-26 2xl:h-30"}`}
+          className={`border-secondary ${selected ? "shadow-custom shadow-secondary animate-jump animate-once" : ""} rounded-lg border ${index === 0 ? "ml-auto aspect-auto max-h-16 md:max-h-22 xl:max-h-26 2xl:max-h-30" : "h-16 md:h-22 2xl:h-30"}`}
         />
         <span
           className={`absolute inset-0 block ${selected ? "" : "animate-fade rounded-lg bg-black/40"} hover:bg-primary/0 transition-all duration-150`}

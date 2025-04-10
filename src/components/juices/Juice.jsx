@@ -32,6 +32,7 @@ function Juice() {
       <div className="font-secondary lg:shadow-custom relative mt-4 h-full grow px-4 pb-4 md:mt-4 md:rounded-xl lg:row-span-3 lg:row-start-1 lg:mt-0 lg:h-full lg:p-4">
         <JuiceTitles product={product} />
         <JuiceDescription product={product} />
+        <div className="divider"></div>
         <JuiceAcidityRatio product={product} />
 
         <div className="md:flex md:flex-row-reverse md:gap-4 lg:flex-row">
