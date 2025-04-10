@@ -1,13 +1,18 @@
+import JuiceCategory from "./JuiceCategory";
+
 function JuiceTitles({ product }) {
   return (
     <>
       {/* Secondary Title */}
-      <h6 className="text-lg font-thin capitalize md:text-lg">
-        {product.secondaryName}
-      </h6>
+      <div className="flex items-center">
+        <h6 className="text-lg font-thin capitalize md:text-xl">
+          {product.secondaryName}
+        </h6>
+        <JuiceCategory product={product} />
+      </div>
 
       {/* Primary Title */}
-      <h4 className="text-secondary text-2xl font-semibold capitalize md:text-3xl">
+      <h4 className="text-secondary text-3xl font-semibold capitalize md:text-4xl">
         {product.primaryName}
       </h4>
 

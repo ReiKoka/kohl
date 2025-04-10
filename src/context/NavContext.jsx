@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { createContext, useEffect, useRef, useState, ReactNode } from "react";
 
 const NavContext = createContext(undefined);
@@ -9,7 +10,10 @@ export const NavProvider = ({ children }) => {
   useEffect(() => {
     const updateNavHeight = () => {
       if (navRef.current) {
-        setNavHeight(navRef.current.offsetHeight);
+        const newHeight = navRef.current.offsetHeight;
+        if (newHeight !== navHeight) {
+          setNavHeight(newHeight);
+        }
       }
     };
 
@@ -17,7 +21,7 @@ export const NavProvider = ({ children }) => {
     window.addEventListener("resize", updateNavHeight);
 
     return () => window.removeEventListener("resize", updateNavHeight);
-  }, [navHeight]);
+  }, []);
 
   return (
     <NavContext.Provider value={{ navHeight, navRef }}>

@@ -8,8 +8,6 @@ import JuiceDescription from "./ui/JuiceDescription";
 import JuiceAcidityRatio from "./ui/JuiceAcidityRatio";
 import JuiceFeatures from "./ui/JuiceFeatures";
 import JuiceExtraInfo from "./ui/JuiceExtraInfo";
-import { useState } from "react";
-import JuiceCategory from "./ui/JuiceCategory";
 
 function Juice() {
   const location = useLocation();
@@ -28,17 +26,18 @@ function Juice() {
 
   return (
     <div className="flex h-full flex-col gap-0 lg:grid lg:grid-cols-[2fr_1fr]">
-      <div className="flex h-[58%] flex-col md:h-1/2 md:flex-row-reverse lg:mt-4">
+      <div className="flex h-[58%] flex-col md:h-1/2 md:flex-row-reverse md:p-2 lg:mt-4">
         <JuiceCarousel slides={slides} options={options} />
       </div>
 
-      <div className="font-secondary lg:bg-base-200 border-secondary relative h-full grow px-4 mt-2 pb-4 md:h-fit md:rounded-xl lg:m-4 lg:border">
+      <div className="font-secondary lg:bg-base-200 border-secondary relative mt-4 h-full grow px-4 pb-4 md:h-fit md:rounded-xl lg:m-4 lg:border">
         <JuiceTitles product={product} />
-        <JuiceCategory product={product} />
         <JuiceDescription product={product} />
         <JuiceAcidityRatio product={product} />
-        <JuiceFeatures product={product} />
-        <JuiceExtraInfo product={product} />
+        <div className="md:flex md:flex-row-reverse md:gap-4">
+          <JuiceFeatures product={product} />
+          <JuiceExtraInfo product={product} />
+        </div>
       </div>
     </div>
   );

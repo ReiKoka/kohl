@@ -4,8 +4,8 @@ function JuiceExtraInfo({ product }) {
   const [tab, setTab] = useState("description");
 
   return (
-    <>
-      <div className="bg-base-300 border-secondary mt-4 mb-2 flex w-full items-center justify-between rounded-full border p-1">
+    <div className="md:flex-2/3">
+      <div className="bg-base-300 border-secondary mt-4 mb-2 flex w-full items-center justify-between rounded-full border p-1 md:w-fit gap-2">
         <button
           className={`font-primary btn btn-xs rounded-full p-3 ${tab === "description" ? "btn-primary animate-jump" : "btn-ghost"}`}
           onClick={() => setTab("description")}
@@ -31,7 +31,7 @@ function JuiceExtraInfo({ product }) {
         {tab === "foodPairing" && product.foodPairing}
         {tab === "directionsOfUse" && product.directionsOfUse}
       </div>
-    </>
+    </div>
   );
 }
 
