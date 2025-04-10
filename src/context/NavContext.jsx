@@ -1,51 +1,26 @@
-// src/contexts/NavContext.jsx (Ensure it looks like this)
-import {
-  createContext,
-  useRef,
-  useState,
-  useCallback,
-  useLayoutEffect,
-} from "react";
+import { createContext, useEffect, useRef, useState, ReactNode } from "react";
 
-const NavContext = createContext();
+const NavContext = createContext(undefined);
 
 export const NavProvider = ({ children }) => {
   const navRef = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
 
-  const updateHeight = useCallback((observedElement) => {
-    if (observedElement) {
-      const currentHeight = observedElement.offsetHeight;
-      if (currentHeight > 0) {
-        setNavHeight(currentHeight);
+  useEffect(() => {
+    const updateNavHeight = () => {
+      if (navRef.current) {
+        setNavHeight(navRef.current.offsetHeight);
       }
-    }
-  }, []);
-
-  useLayoutEffect(() => {
-    const node = navRef.current;
-    if (!node) return;
-
-    updateHeight(node);
-
-    const observer = new ResizeObserver((entries) => {
-      const entry = entries[0];
-      if (entry?.target) {
-        window.requestAnimationFrame(() => {
-          updateHeight(entry.target);
-        });
-      }
-    });
-
-    observer.observe(node);
-
-    return () => {
-      observer.disconnect();
     };
-  }, [updateHeight]);
+
+    updateNavHeight();
+    window.addEventListener("resize", updateNavHeight);
+
+    return () => window.removeEventListener("resize", updateNavHeight);
+  }, [navHeight]);
 
   return (
-    <NavContext.Provider value={{ navRef, navHeight }}>
+    <NavContext.Provider value={{ navHeight, navRef }}>
       {children}
     </NavContext.Provider>
   );

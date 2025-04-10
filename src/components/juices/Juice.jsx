@@ -34,7 +34,7 @@ function Juice() {
         <JuiceDescription product={product} />
         <JuiceAcidityRatio product={product} />
         <JuiceFeatures product={product} />
-        {/* <JuiceExtraInfo product={product} /> */}
+        <JuiceExtraInfo product={product} />
       </div>
     </div>
   );

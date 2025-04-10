@@ -6,13 +6,10 @@ function AppLayout() {
   const { navHeight } = useNav();
 
   return (
-    <div className="bg-base-300 flex h-svh w-dvw flex-col">
+    <div className="bg-base-300 flex h-svh max-h-svh w-dvw flex-col overflow-hidden">
       <Nav />
       <div
-        style={{
-          minHeight: `calc(100svh - ${navHeight}px)`,
-          marginTop: `${navHeight}px`,
-        }}
+        style={{ minHeight: `calc(100% - ${navHeight})`, marginTop: navHeight }}
         className="overflow-x-clip overflow-y-auto"
       >
         <Outlet />
