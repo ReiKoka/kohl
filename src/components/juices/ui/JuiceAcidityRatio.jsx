@@ -9,7 +9,7 @@ function JuiceAcidityRatio({ product }) {
   );
   return (
     <>
-      <div className="font-primary text-base-content mt-2 flex justify-center gap-2 text-sm font-medium capitalize md:text-sm">
+      <div className="font-primary text-base-content mt-2 flex justify-center gap-2 text-sm font-semibold capitalize md:text-sm">
         <p>acidity</p>
         <div className="flex items-center gap-0.5">
           {positions.map((position) => {
