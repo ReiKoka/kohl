@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./JuiceCarouselThumbsButton";
 import Autoplay from "embla-carousel-autoplay";
+import { handleImageLoad } from "../../utils/helpers";
 
 const JuiceCarousel = (props) => {
   const { slides, options } = props;
@@ -43,24 +44,6 @@ const JuiceCarousel = (props) => {
 
   const [imageAspectRatios, setImageAspectRatios] = useState({});
 
-  const handleImageLoad = (event, index) => {
-    const img = event.target;
-    const { naturalWidth, naturalHeight } = img;
-
-    let aspectRatioType = "square"; // Default to square
-    if (naturalHeight > naturalWidth) {
-      aspectRatioType = "portrait";
-    } else if (naturalWidth > naturalHeight) {
-      aspectRatioType = "landscape";
-    }
-
-    // Update state using the functional form to avoid potential race conditions
-    setImageAspectRatios((prevRatios) => ({
-      ...prevRatios,
-      [index]: aspectRatioType, // Store the type for this specific image index
-    }));
-  };
-
   return (
     <div className="embla embla-juice">
       <div className="embla__viewport" ref={emblaMainRef}>
@@ -81,7 +64,9 @@ const JuiceCarousel = (props) => {
                   <img
                     src={slide}
                     alt={`Slide ${index + 1}`}
-                    onLoad={(event) => handleImageLoad(event, index)}
+                    onLoad={(event) =>
+                      handleImageLoad(event, index, setImageAspectRatios)
+                    }
                     className={`mx-auto h-full rounded-b-xl object-cover md:rounded-xl ${dimensionClass}`}
                   />
                 </div>

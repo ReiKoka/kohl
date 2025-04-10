@@ -29,3 +29,20 @@ export const normalizeString = (inputString) => {
 
   return inputString.replace(/%20| /g, "");
 };
+
+export const handleImageLoad = (event, index, setImageAspectRatios) => {
+  const img = event.target;
+  const { naturalWidth, naturalHeight } = img;
+
+  let aspectRatioType = "square";
+  if (naturalHeight > naturalWidth) {
+    aspectRatioType = "portrait";
+  } else if (naturalWidth > naturalHeight) {
+    aspectRatioType = "landscape";
+  }
+
+  setImageAspectRatios((prevRatios) => ({
+    ...prevRatios,
+    [index]: aspectRatioType,
+  }));
+};
