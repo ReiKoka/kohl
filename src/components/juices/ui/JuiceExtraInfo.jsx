@@ -5,21 +5,21 @@ function JuiceExtraInfo({ product }) {
 
   return (
     <div className="md:flex-2/3">
-      <div className="bg-base-300 border-secondary mt-4 mb-2 flex w-full items-center justify-between rounded-full border p-1 md:w-fit gap-2">
+      <div className="bg-base-300 shadow-custom mt-4 mb-2 flex w-full items-center justify-between gap-2 rounded-full p-1 md:w-fit lg:mt-0">
         <button
-          className={`font-primary btn btn-xs rounded-full p-3 ${tab === "description" ? "btn-primary animate-jump" : "btn-ghost"}`}
+          className={`font-primary btn btn-xs lg:btn-sm rounded-full p-3 lg:text-sm ${tab === "description" ? "btn-primary animate-jump" : "btn-ghost"}`}
           onClick={() => setTab("description")}
         >
           Description
         </button>
         <button
-          className={`font-primary btn btn-xs rounded-full p-3 ${tab === "foodPairing" ? "btn-primary animate-jump" : "btn-ghost"}`}
+          className={`font-primary btn btn-xs lg:btn-sm rounded-full p-3 lg:text-sm ${tab === "foodPairing" ? "btn-primary animate-jump" : "btn-ghost"}`}
           onClick={() => setTab("foodPairing")}
         >
           Excellent
         </button>
         <button
-          className={`font-primary btn btn-xs rounded-full p-3 ${tab === "directionsOfUse" ? "btn-primary animate-jump" : "btn-ghost"}`}
+          className={`font-primary btn btn-xs lg:btn-sm rounded-full p-3 lg:text-sm ${tab === "directionsOfUse" ? "btn-primary animate-jump" : "btn-ghost"}`}
           onClick={() => setTab("directionsOfUse")}
         >
           Directions of Use
