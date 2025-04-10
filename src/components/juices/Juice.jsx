@@ -7,6 +7,9 @@ import JuiceTitles from "./ui/JuiceTitles";
 import JuiceDescription from "./ui/JuiceDescription";
 import JuiceAcidityRatio from "./ui/JuiceAcidityRatio";
 import JuiceFeatures from "./ui/JuiceFeatures";
+import JuiceExtraInfo from "./ui/JuiceExtraInfo";
+import { useState } from "react";
+import JuiceCategory from "./ui/JuiceCategory";
 
 function Juice() {
   const location = useLocation();
@@ -29,8 +32,9 @@ function Juice() {
         <JuiceCarousel slides={slides} options={options} />
       </div>
 
-      <div className="font-secondary lg:bg-base-200 border-secondary h-full grow px-4 pt-2 pb-4 md:h-fit md:rounded-xl lg:m-4 lg:border">
+      <div className="font-secondary lg:bg-base-200 border-secondary relative h-full grow px-4 mt-2 pb-4 md:h-fit md:rounded-xl lg:m-4 lg:border">
         <JuiceTitles product={product} />
+        <JuiceCategory product={product} />
         <JuiceDescription product={product} />
         <JuiceAcidityRatio product={product} />
         <JuiceFeatures product={product} />
