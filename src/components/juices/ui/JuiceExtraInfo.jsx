@@ -26,7 +26,7 @@ function JuiceExtraInfo({ product }) {
         </button>
       </div>
 
-      <div className="text-secondary w-full px-3 py-1 text-xs">
+      <div className="text-secondary font-primary w-full px-3 py-1 text-xs md:text-sm lg:text-base">
         {tab === "description" && product.descriptionSub}
         {tab === "foodPairing" && product.foodPairing}
         {tab === "directionsOfUse" && product.directionsOfUse}

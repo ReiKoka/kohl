@@ -34,7 +34,7 @@ function Juice() {
         <JuiceDescription product={product} />
         <JuiceAcidityRatio product={product} />
 
-        <div className="md:flex md:flex-row-reverse md:gap-4">
+        <div className="md:flex md:flex-row-reverse md:gap-4 lg:flex-row">
           <JuiceFeatures product={product} />
           {!matches && <JuiceExtraInfo product={product} />}
         </div>
