@@ -35,7 +35,7 @@ function SingleJuice({ product }) {
       className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95"
       onClick={() => navigate(`/juices/${product.primaryName}`)}
     >
-      <div className="badge badge-primary md:badge-lg absolute top-0 right-0 min-w-24 capitalize md:top-2 md:right-2 md:rounded-lg">
+      <div className="badge badge-primary font-primary md:badge-lg absolute top-1 right-1 min-w-24 leading-0 capitalize md:top-2 md:right-2 md:rounded-lg">
         {product.category}
       </div>
 
@@ -45,16 +45,16 @@ function SingleJuice({ product }) {
         className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
-        <h6 className="text-base font-thin capitalize md:text-lg">
+        <h6 className="text-lg font-extralight capitalize md:text-lg">
           {product.secondaryName}
         </h6>
-        <h4 className="text-secondary text-xl font-medium capitalize md:text-2xl">
+        <h4 className="text-secondary text-2xl font-semibold capitalize md:text-2xl">
           {product.primaryName}
         </h4>
-        <p className="text-secondary font-primary mt-2 text-xs md:text-sm">
+        <p className="text-secondary font-primary mt-2 text-sm">
           {product.subtitle}
         </p>
-        <div className="font-primary text-base-content mt-2 flex gap-2 text-xs font-medium capitalize md:text-sm">
+        <div className="font-primary text-base-content mt-2 flex gap-2 text-sm font-semibold capitalize">
           <p>acidity</p>
           <div className="flex items-center gap-0.5">
             {positions.map((position) => {
