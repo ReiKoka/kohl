@@ -14,7 +14,7 @@ function Nav() {
   return (
     <nav
       ref={navRef}
-      className="font-primary border-secondary bg-base-300 fixed top-0 left-0 flex h-fit min-h-10 w-full items-center border-b p-3"
+      className="font-primary z-30 border-secondary bg-base-300 fixed top-0 left-0 flex h-fit min-h-10 w-full items-center border-b p-3"
     >
       <div
         className="font-secondary text-secondary flex w-fit cursor-pointer items-center gap-2"

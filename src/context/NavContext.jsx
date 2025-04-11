@@ -7,6 +7,7 @@ export const NavProvider = ({ children }) => {
   const navRef = useRef(null);
   const [navHeight, setNavHeight] = useState(0);
 
+
   useEffect(() => {
     const updateNavHeight = () => {
       if (navRef.current) {

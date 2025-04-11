@@ -16,8 +16,6 @@ function Juices() {
             <SingleJuice key={product.id} product={product} />
           ))}
       </div>
-
-      <Footer />
     </>
   );
 }
