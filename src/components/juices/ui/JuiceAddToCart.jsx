@@ -8,7 +8,7 @@ import { showToast } from "../../../utils/showToast";
 function JuiceAddToCart({ product }) {
   const { onAdd, cart } = useCart();
   const [quantity, setQuantity] = useState(
-    cart.find((item) => item.product.id === product.id).quantity,
+    cart.find((item) => item.product.id === product.id)?.quantity || 1,
   );
 
   const notify = () =>
