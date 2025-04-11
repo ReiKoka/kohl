@@ -14,7 +14,7 @@ function JuiceAddToCart({ product }) {
 
         <div className="flex items-center gap-2">
           <button
-            className="btn btn-sm bg-primary active:animate-jump aspect-square rounded-full p-0"
+            className="btn btn-sm bg-primary aspect-square rounded-full p-0 transition-all duration-150 active:scale-75"
             onClick={() => quantity > 1 && setQuantity((prev) => prev - 1)}
           >
             <Minus className="fill-base-100 h-4 w-4" />
@@ -25,7 +25,7 @@ function JuiceAddToCart({ product }) {
             </p>
           </div>
           <button
-            className="btn btn-sm bg-primary active:animate-jump aspect-square rounded-full p-0"
+            className="btn btn-sm bg-primary aspect-square rounded-full p-0 transition-all duration-150 active:scale-75"
             onClick={() => setQuantity((prev) => prev + 1)}
           >
             <Plus className="fill-base-100 h-4 w-4" />
@@ -33,7 +33,7 @@ function JuiceAddToCart({ product }) {
         </div>
       </div>
 
-      <button className="btn btn-primary btn-lg font-primary active:animate-jump">
+      <button className="btn btn-primary btn-lg font-primary transition-all duration-150 active:scale-75">
         Add to Cart
       </button>
     </div>

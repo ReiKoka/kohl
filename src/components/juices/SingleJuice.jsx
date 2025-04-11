@@ -11,7 +11,7 @@ function SingleJuice({ product }) {
   const matches = useMediaQuery("(min-width: 768px");
   const navigate = useNavigate();
 
-  const notify = () => toast.success("Added to Cart!");
+  const notify = () => toast.success(`1 ${product.primaryName} added to cart`);
 
   const totalCircles = 5;
 
@@ -23,7 +23,7 @@ function SingleJuice({ product }) {
 
   return (
     <div
-      className="shadow-custom bg-base-200 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 transition-all duration-150 hover:scale-95"
+      className="bg-secondary/20 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-95"
       onClick={() => navigate(`/juices/${product.primaryName}`)}
     >
       <div className="badge badge-primary font-primary md:badge-lg absolute top-1 right-1 min-w-24 leading-0 capitalize md:top-2 md:right-2 md:rounded-lg">
@@ -33,6 +33,7 @@ function SingleJuice({ product }) {
       <img
         src={product.images[0]}
         alt={product.name}
+        width="144px"
         className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
