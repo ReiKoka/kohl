@@ -10,10 +10,12 @@ import JuiceFeatures from "./ui/JuiceFeatures";
 import JuiceExtraInfo from "./ui/JuiceExtraInfo";
 import { useMediaQuery } from "usehooks-ts";
 import JuiceAddToCart from "./ui/JuiceAddToCart";
+import { useNav } from "./../../hooks/useNav";
 
 function Juice() {
   const location = useLocation();
   const matches = useMediaQuery("(min-width: 1024px");
+  const { navHeight } = useNav();
   const searchParam = normalizeString(location.pathname.split("/").at(2));
   const product = productsData.products.find(
     (item) => normalizeString(item.primaryName) === searchParam,
@@ -24,13 +26,20 @@ function Juice() {
   const slides = product.images;
   const options = { loop: true };
 
+  const containerStyle = {
+    "--nav-height": `${navHeight}px`,
+  };
+
   return (
-    <div className="flex h-full flex-col gap-0 lg:grid lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4">
+    <div
+      style={containerStyle}
+      className="flex h-[calc(100svh_-_var(--nav-height))] flex-col gap-0 lg:grid lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4"
+    >
       <div className="flex h-[58%] flex-col md:h-1/2 md:flex-row-reverse md:p-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:gap-4 lg:p-0">
         <JuiceCarousel slides={slides} options={options} />
       </div>
 
-      <div className="font-secondary flex flex-col lg:shadow-custom relative mt-4 h-full grow px-4 pb-4 md:mt-4 md:rounded-xl lg:row-span-3 lg:row-start-1 lg:mt-0 lg:h-full lg:p-4">
+      <div className="font-secondary lg:shadow-custom relative mt-4 flex h-full grow flex-col px-4 pb-4 md:mt-4 md:rounded-xl lg:row-span-3 lg:row-start-1 lg:mt-0 lg:h-full lg:p-4">
         <JuiceTitles product={product} />
         <JuiceDescription product={product} />
         <div className="divider"></div>

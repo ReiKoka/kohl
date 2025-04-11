@@ -7,16 +7,18 @@ function AppLayout() {
   const { navHeight } = useNav();
 
   return (
-    <div className="bg-base-300 flex h-svh max-h-svh w-dvw flex-col overflow-hidden">
+    <main className="bg-base-300 flex h-svh max-h-svh w-dvw flex-col overflow-hidden">
       <Nav />
       <div
         style={{ marginTop: navHeight }}
-        className="flex h-auto flex-col overflow-x-hidden overflow-y-auto"
+        className="flex flex-1 flex-col overflow-x-hidden overflow-y-auto"
       >
-        <Outlet />
+        <div className="flex-1">
+          <Outlet />
+        </div>
         <Footer />
       </div>
-    </div>
+    </main>
   );
 }
 

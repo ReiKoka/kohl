@@ -6,7 +6,7 @@ import InfoSection from "../components/home/InfoSection";
 
 function Home() {
   return (
-    <div className="font-secondary h-full">
+    <div className="font-secondary">
       <HeroSection />
       <InfoSection />
       <Gourmet />
