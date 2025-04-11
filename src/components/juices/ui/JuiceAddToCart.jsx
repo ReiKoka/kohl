@@ -1,17 +1,15 @@
 import { Minus, Plus, ShoppingCart } from "@phosphor-icons/react";
-import {
-  capitalizeFirstLetter,
-  formatPriceALL,
-  handleAddToCart,
-} from "../../../utils/helpers";
+import { capitalizeFirstLetter, handleAddToCart } from "../../../utils/helpers";
 import { useState } from "react";
 import { useCart } from "../../../hooks/useCart";
 
 import { showToast } from "../../../utils/showToast";
 
 function JuiceAddToCart({ product }) {
-  const [quantity, setQuantity] = useState(1);
-  const { setCart } = useCart();
+  const { onAdd, cart } = useCart();
+  const [quantity, setQuantity] = useState(
+    cart.find((item) => item.product.id === product.id).quantity,
+  );
 
   const notify = () =>
     showToast(
@@ -45,7 +43,7 @@ function JuiceAddToCart({ product }) {
 
       <button
         className="btn btn-primary font-primary flex items-center justify-center gap-4 transition-all duration-150 active:scale-75"
-        onClick={(e) => handleAddToCart(e, setCart, product, quantity, notify)}
+        onClick={(e) => handleAddToCart(e, onAdd, product, notify, quantity)}
       >
         <ShoppingCart className="fill-primary-content h-6 w-6" />
         <span>Add to Cart</span>

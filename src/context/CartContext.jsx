@@ -1,24 +1,50 @@
-import { createContext, useState } from "react";
+import { createContext } from "react";
+import { useLocalStorage } from "usehooks-ts";
 
 const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useLocalStorage("cart", []);
 
   const totalItems = cart?.length || 0;
-  // const totalPrice =
-  //   cart?.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0;
 
-  const onRemove = (index) => {
-    const updatedCart = [...cart];
-    updatedCart.splice(index, 1);
-    setCart(updatedCart);
+  const onAdd = (productToAdd, quantity = 1) => {
+    setCart((prevCart) => {
+      const existingItemIndex = prevCart.findIndex(
+        (item) => item.product.id === productToAdd.id,
+      );
+
+      if (existingItemIndex > -1) {
+        const updatedCart = [...prevCart];
+        updatedCart[existingItemIndex].quantity += quantity;
+        return updatedCart;
+      } else {
+        return [...prevCart, { product: productToAdd, quantity: quantity }];
+      }
+    });
   };
 
-  const onQuantityChange = (index, newQuantity) => {
-    const updatedCart = [...cart];
-    updatedCart[index].quantity = newQuantity;
-    setCart(updatedCart);
+  const onRemove = (productIdToRemove) => {
+    setCart((prevCart) =>
+      prevCart.filter((item) => item.product.id !== productIdToRemove),
+    );
+  };
+
+  const onQuantityChange = (productIdToUpdate, newQuantity) => {
+    setCart((prevCart) => {
+      const updatedCart = prevCart.map((item) => {
+        if (item.product.id === productIdToUpdate) {
+          const validQuantity = Math.max(1, newQuantity);
+          return { ...item, quantity: validQuantity };
+        }
+        return item;
+      });
+      return updatedCart;
+    });
+  };
+
+  const clearCart = () => {
+    setCart([]);
   };
 
   return (
@@ -28,6 +54,8 @@ export const CartProvider = ({ children }) => {
         setCart,
         totalItems,
         // totalPrice,
+        clearCart,
+        onAdd,
         onRemove,
         onQuantityChange,
       }}

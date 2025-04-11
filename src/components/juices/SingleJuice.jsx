@@ -7,7 +7,7 @@ import { capitalizeFirstLetter, handleAddToCart } from "../../utils/helpers";
 import { showToast } from "../../utils/showToast";
 
 function SingleJuice({ product }) {
-  const { setCart } = useCart();
+  const { onAdd } = useCart();
   const matches = useMediaQuery("(min-width: 768px");
   const navigate = useNavigate();
 
@@ -75,7 +75,7 @@ function SingleJuice({ product }) {
         <div className="mt-auto flex items-end justify-end">
           <button
             className={`btn btn-primary btn-sm font-primary focus-visible:ring-primary flex items-center gap-2 outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 ${matches ? "" : "btn-circle rounded-full"}`}
-            onClick={(e) => handleAddToCart(e, setCart, product, 1, notify)}
+            onClick={(e) => handleAddToCart(e, onAdd, product, notify)}
           >
             {matches ? (
               <>
