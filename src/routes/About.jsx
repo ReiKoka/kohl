@@ -1,6 +1,7 @@
 import img1 from "../assets/images/nature-2.webp";
 import img2 from "../assets/images/nature-3.webp";
 import img3 from "../assets/images/thomas-kohl.webp";
+import Footer from "../components/ui/Footer";
 
 function About() {
   return (
@@ -101,6 +102,7 @@ function About() {
           style={{ backgroundImage: `url(${img3})` }}
         ></div>
       </div>
+      <Footer />
     </section>
   );
 }
