@@ -33,9 +33,9 @@ function Juice() {
   return (
     <div
       style={containerStyle}
-      className="flex h-[calc(100svh_-_var(--nav-height))] flex-col gap-0 lg:grid lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4"
+      className="flex h-full flex-col gap-0 lg:grid lg:h-[calc(100svh_-_var(--nav-height))] lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4"
     >
-      <div className="flex h-[58%] flex-col md:h-1/2 md:flex-row-reverse md:p-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:gap-4 lg:p-0">
+      <div className="flex h-[calc((100svh_-_var(--nav-height))_*_0.58)] flex-col md:flex-row-reverse md:p-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:gap-4 lg:p-0 md:portrait:h-[calc((100svh_-_var(--nav-height))_*_0.5)]">
         <JuiceCarousel slides={slides} options={options} />
       </div>
 
@@ -45,7 +45,7 @@ function Juice() {
         <div className="divider"></div>
         <JuiceAcidityRatio product={product} />
 
-        <div className="md:flex md:flex-row-reverse md:gap-4 lg:flex-row">
+        <div className="mb-8 md:flex md:flex-col-reverse lg:flex-row">
           <JuiceFeatures product={product} />
           {!matches && <JuiceExtraInfo product={product} />}
         </div>
