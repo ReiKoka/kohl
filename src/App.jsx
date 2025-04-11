@@ -5,6 +5,7 @@ import Juices from "./routes/Juices";
 import Cart from "./routes/Cart";
 import AppLayout from "./routes/AppLayout";
 import Juice from "./components/juices/Juice";
+import ErrorRoute from "./routes/ErrorRoute";
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +32,10 @@ function App() {
         {
           path: "/cart",
           element: <Cart />,
+        },
+        {
+          path: "*",
+          element: <ErrorRoute />,
         },
       ],
     },
