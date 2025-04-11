@@ -46,3 +46,21 @@ export const handleImageLoad = (event, index, setImageAspectRatios) => {
     [index]: aspectRatioType,
   }));
 };
+
+export const handleAddToCart = (e, setCart, product, quantity, notify) => {
+  e.stopPropagation();
+  setCart((prev) => {
+    const existingProduct = prev.find(
+      (item) => item.id === product.id,
+    );
+    if (existingProduct) {
+      return prev.map((item) =>
+        item.id === product.id
+          ? { ...item, quantity: item.quantity + quantity }
+          : item,
+      );
+    }
+    return [...prev, { ...product, quantity: quantity }];
+  });
+  notify();
+}

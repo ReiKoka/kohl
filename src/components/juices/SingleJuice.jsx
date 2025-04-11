@@ -5,6 +5,7 @@ import { useNavigate } from "react-router";
 
 import { useCart } from "../../hooks/useCart";
 import { toast } from "sonner";
+import { handleAddToCart } from "../../utils/helpers";
 
 function SingleJuice({ product }) {
   const { setCart } = useCart();
@@ -70,23 +71,7 @@ function SingleJuice({ product }) {
         <div className="mt-auto flex items-end justify-end">
           <button
             className={`btn btn-primary btn-sm font-primary focus-visible:ring-primary flex items-center gap-2 outline-0 focus-visible:ring-2 focus-visible:ring-offset-2 ${matches ? "" : "btn-circle rounded-full"}`}
-            onClick={(e) => {
-              e.stopPropagation();
-              setCart((prev) => {
-                const existingProduct = prev.find(
-                  (item) => item.id === product.id,
-                );
-                if (existingProduct) {
-                  return prev.map((item) =>
-                    item.id === product.id
-                      ? { ...item, quantity: item.quantity + 1 }
-                      : item,
-                  );
-                }
-                return [...prev, { ...product, quantity: 1 }];
-              });
-              notify();
-            }}
+            onClick={(e) => handleAddToCart(e, setCart, product, 1, notify)}
           >
             {matches ? (
               <>
