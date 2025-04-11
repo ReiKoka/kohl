@@ -7,7 +7,7 @@ function ErrorRoute() {
 
   return (
     <div className="flex h-full w-full flex-col items-center justify-center gap-6">
-      <ErrorImage className="text-primary w-80 md:w-96 xl:w-[450px] 2xl:w-[600px]" />
+      <ErrorImage className="text-primary animate-jump-in animate-duration-700 w-80 md:w-96 xl:w-[450px] 2xl:w-[600px]" />
       <h1 className="font-primary text-neutral mx-auto w-[90%] text-center text-xl font-bold">
         Oops, Could not find the page you are looking for!
       </h1>

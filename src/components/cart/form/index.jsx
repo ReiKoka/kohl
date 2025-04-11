@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
-import { useCart } from "../../hooks/useCart";
+import { useCart } from "../../../hooks/useCart";
 
 import { useNavigate } from "react-router";
 import { toast } from "sonner";
