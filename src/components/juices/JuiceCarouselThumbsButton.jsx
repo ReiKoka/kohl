@@ -10,13 +10,13 @@ export const Thumb = (props) => {
       <button
         onClick={onClick}
         type="button"
-        className="relative cursor-pointer md:mx-auto"
+        className="group relative cursor-pointer outline-0 md:mx-auto"
         aria-label={`Go to slide ${index + 1}`}
       >
         <img
           src={slide}
           alt={`img-${index + 1}`}
-          className={`border-secondary ${selected ? "shadow-custom shadow-secondary animate-jump animate-once" : ""} rounded-lg border ${index === 0 ? "ml-auto aspect-auto max-h-16 md:max-h-22 xl:max-h-26 2xl:max-h-30" : "h-16 md:h-22 2xl:h-30"}`}
+          className={`${selected ? "animate-jump animate-once" : ""} rounded-lg ${index === 0 ? "ml-auto aspect-auto max-h-16 outline-0 md:max-h-22 xl:max-h-26 2xl:max-h-30" : "h-16 md:h-22 2xl:h-30"} group-focus:ring-secondary group-focus:ring-offset-base-300 group-focus:border-secondary group-focus:border group-focus:ring-2 group-focus:ring-offset-2`}
         />
         <span
           className={`absolute inset-0 block ${selected ? "" : "animate-fade rounded-lg bg-black/40"} hover:bg-primary/0 transition-all duration-150`}

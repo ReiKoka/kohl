@@ -79,7 +79,7 @@
   }
 
   .embla-thumbs__viewport {
-    padding: 0;
+    padding-inline: 0;
   }
 
   .embla-thumbs__container {
