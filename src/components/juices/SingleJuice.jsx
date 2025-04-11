@@ -24,7 +24,8 @@ function SingleJuice({ product }) {
 
   return (
     <div
-      className="bg-secondary/20 font-secondary hover:bg-base-100 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-95"
+      className="bg-secondary/20 font-secondary hover:bg-primary/10 focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-base-300 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-105 focus-visible:border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-0"
+      tabIndex={1}
       onClick={() => navigate(`/juices/${product.primaryName}`)}
     >
       <div className="badge badge-primary font-primary md:badge-lg absolute top-1 right-1 min-w-24 leading-0 capitalize md:top-2 md:right-2 md:rounded-lg">
