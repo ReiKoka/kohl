@@ -21,8 +21,6 @@ function Juice() {
     (item) => normalizeString(item.primaryName) === searchParam,
   );
 
-  
-
   if (!product) return <Loader />;
 
   const slides = product.images;
@@ -35,7 +33,7 @@ function Juice() {
   return (
     <div
       style={containerStyle}
-      className="flex h-full flex-col gap-0 lg:grid lg:h-[calc(100svh_-_var(--nav-height))] lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4"
+      className="flex h-full flex-col gap-0 lg:grid lg:h-[calc(100svh_-_var(--nav-height))] lg:grid-cols-[2fr_1fr] lg:grid-rows-3 lg:gap-4 lg:p-4 lg:pr-4 2xl:grid-cols-[2.5fr_1fr]"
     >
       <div className="flex h-[calc((100svh_-_var(--nav-height))_*_0.58)] flex-col md:flex-row-reverse md:p-2 lg:row-span-2 lg:row-start-1 lg:h-full lg:gap-4 lg:p-0 md:portrait:h-[calc((100svh_-_var(--nav-height))_*_0.5)]">
         <JuiceCarousel slides={slides} options={options} />

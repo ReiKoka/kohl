@@ -1,4 +1,4 @@
-import { Minus, Plus } from "@phosphor-icons/react";
+import { Minus, Plus, ShoppingCart } from "@phosphor-icons/react";
 import {
   capitalizeFirstLetter,
   formatPriceALL,
@@ -48,10 +48,11 @@ function JuiceAddToCart({ product }) {
       </div>
 
       <button
-        className="btn btn-primary btn-lg font-primary transition-all duration-150 active:scale-75"
+        className="btn btn-primary btn-lg font-primary flex items-center justify-center gap-4 transition-all duration-150 active:scale-75"
         onClick={(e) => handleAddToCart(e, setCart, product, quantity, notify)}
       >
-        Add to Cart
+        <ShoppingCart className="fill-primary-content h-6 w-6" />
+        <span>Add to Cart</span>
       </button>
     </div>
   );
