@@ -6,8 +6,8 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
 
   const totalItems = cart?.length || 0;
-  const totalPrice =
-    cart?.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0;
+  // const totalPrice =
+  //   cart?.reduce((acc, item) => acc + item.price * item.quantity, 0) || 0;
 
   const onRemove = (index) => {
     const updatedCart = [...cart];
@@ -27,7 +27,7 @@ export const CartProvider = ({ children }) => {
         cart,
         setCart,
         totalItems,
-        totalPrice,
+        // totalPrice,
         onRemove,
         onQuantityChange,
       }}
