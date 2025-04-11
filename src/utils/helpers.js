@@ -64,3 +64,13 @@ export const handleAddToCart = (e, setCart, product, quantity, notify) => {
   });
   notify();
 }
+
+export function capitalizeFirstLetter(str) {
+  if (typeof str !== "string" || str.length === 0) {
+    return "";
+  }
+  const firstChar = str.charAt(0).toUpperCase();
+  const restOfString = str.slice(1);
+  return firstChar + restOfString;
+}
+

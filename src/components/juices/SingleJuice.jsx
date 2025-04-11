@@ -2,17 +2,20 @@ import { Plus, PlusCircle } from "@phosphor-icons/react";
 import clsx from "clsx";
 import { useMediaQuery } from "usehooks-ts";
 import { useNavigate } from "react-router";
-
 import { useCart } from "../../hooks/useCart";
-import { toast } from "sonner";
-import { handleAddToCart } from "../../utils/helpers";
+import { capitalizeFirstLetter, handleAddToCart } from "../../utils/helpers";
+import { showToast } from "../../utils/showToast";
 
 function SingleJuice({ product }) {
   const { setCart } = useCart();
   const matches = useMediaQuery("(min-width: 768px");
   const navigate = useNavigate();
 
-  const notify = () => toast.success(`1 ${product.primaryName} added to cart`);
+  const notify = () =>
+    showToast(
+      "success",
+      `1 ${capitalizeFirstLetter(product.primaryName)} added to cart`,
+    );
 
   const totalCircles = 5;
 

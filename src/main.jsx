@@ -12,7 +12,7 @@ createRoot(document.getElementById("root")).render(
     <NavProvider>
       <CartProvider>
         <App />
-        <Toaster />
+        <Toaster position="top-center" />
       </CartProvider>
     </NavProvider>
   </StrictMode>,

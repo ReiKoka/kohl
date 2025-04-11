@@ -21,6 +21,8 @@ function Juice() {
     (item) => normalizeString(item.primaryName) === searchParam,
   );
 
+  
+
   if (!product) return <Loader />;
 
   const slides = product.images;

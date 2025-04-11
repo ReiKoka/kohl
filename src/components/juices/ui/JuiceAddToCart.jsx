@@ -1,14 +1,23 @@
-import { Minus, Money, Plus } from "@phosphor-icons/react";
-import { formatPriceALL, handleAddToCart } from "../../../utils/helpers";
+import { Minus, Plus } from "@phosphor-icons/react";
+import {
+  capitalizeFirstLetter,
+  formatPriceALL,
+  handleAddToCart,
+} from "../../../utils/helpers";
 import { useState } from "react";
 import { useCart } from "../../../hooks/useCart";
-import { toast } from "sonner";
+
+import { showToast } from "../../../utils/showToast";
 
 function JuiceAddToCart({ product }) {
   const [quantity, setQuantity] = useState(1);
   const { setCart } = useCart();
+
   const notify = () =>
-    toast.success(`${quantity} ${product.primaryName} added to cart`);
+    showToast(
+      "success",
+      `${quantity} ${capitalizeFirstLetter(product.primaryName)} added to cart`,
+    );
 
   return (
     <div className="mt-auto flex w-full flex-col gap-4">
