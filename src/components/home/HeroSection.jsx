@@ -21,14 +21,14 @@ function HeroSection() {
   };
 
   return (
-    <div
+    <section
       style={containerStyle}
       className="h-[calc((100svh_-_var(--nav-height))_*_0.4)] md:portrait:h-[calc((100svh_-_var(--nav-height))_*_0.5)] sm:landscape:h-[calc(100svh_-_var(--nav-height))] lg:landscape:h-[calc(100svh_-_var(--nav-height))]"
     >
       <div className="relative h-full w-full bg-cover bg-bottom">
         <HeroCarousel slides={slides} options={options} />
       </div>
-    </div>
+    </section>
   );
 }
 

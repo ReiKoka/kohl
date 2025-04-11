@@ -6,7 +6,7 @@ function Juices() {
   const { products } = productsData;
 
   return (
-    <>
+    <section>
       <h1 className="font-secondary text-secondary py-4 text-center text-2xl font-normal uppercase md:py-6 md:text-3xl lg:text-4xl">
         Our Juices
       </h1>
@@ -16,7 +16,8 @@ function Juices() {
             <SingleJuice key={product.id} product={product} />
           ))}
       </div>
-    </>
+      <Footer />
+    </section>
   );
 }
 

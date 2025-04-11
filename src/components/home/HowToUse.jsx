@@ -57,7 +57,7 @@ const options = { loop: true };
 
 function HowToUse() {
   return (
-    <div className="border-secondary/30 mt-8 flex w-full flex-col border-b md:p-8 lg:px-8 lg:py-12">
+    <section className="border-secondary/30 mt-8 flex w-full flex-col border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
         How you can use our juices
       </h1>
@@ -74,7 +74,7 @@ function HowToUse() {
       <div className="mx-auto mt-8 h-[340px] min-h-80 w-full max-w-4xl md:h-full">
         <HowToUseCarousel slides={slides} options={options} />
       </div>
-    </div>
+    </section>
   );
 }
 

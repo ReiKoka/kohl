@@ -1,7 +1,6 @@
 import { Outlet } from "react-router";
 import Nav from "../components/ui/Nav";
 import { useNav } from "../hooks/useNav";
-import Footer from "./../components/ui/Footer";
 import Loader from "../components/ui/Loader";
 
 function AppLayout() {
@@ -21,7 +20,6 @@ function AppLayout() {
         ) : (
           <Loader />
         )}
-        <Footer />
       </div>
     </main>
   );

@@ -2,7 +2,7 @@ import cuvee from "../../assets/images/cuvee.webp";
 
 function Cuvee() {
   return (
-    <div className="border-secondary/30 mt-8 w-full border-b md:p-8 lg:px-8 lg:py-12">
+    <section className="border-secondary/30 mt-8 w-full border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
         Cuvée
       </h1>
@@ -20,7 +20,7 @@ function Cuvee() {
           className="mx-auto mb-8 w-full max-w-3xl"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

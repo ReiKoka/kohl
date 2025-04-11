@@ -2,7 +2,7 @@ import gourmet from "../../assets/images/gourmet.webp";
 
 function Gourmet() {
   return (
-    <div className="border-secondary/30 w-full border-b md:p-8 lg:px-8 lg:py-12">
+    <section className="border-secondary/30 w-full border-b md:p-8 lg:px-8 lg:py-12">
       <h1 className="font-secondary text-secondary pt-4 text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
         Gourmet
       </h1>
@@ -21,7 +21,7 @@ function Gourmet() {
           className="mx-auto mb-8 w-full max-w-3xl"
         />
       </div>
-    </div>
+    </section>
   );
 }
 

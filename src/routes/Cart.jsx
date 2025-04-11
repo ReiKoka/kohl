@@ -8,9 +8,9 @@ function Cart() {
   const { cart, setCart } = useCart();
 
   return (
-    <div className="h-full">
+    <section className="h-full">
       {cart.length === 0 ? <EmptyCart /> : <FilledCart />}
-    </div>
+    </section>
   );
 }
 
