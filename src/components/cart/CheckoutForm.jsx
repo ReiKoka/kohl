@@ -48,11 +48,17 @@ function CheckoutForm({ isOpenForm, setIsOpenForm }) {
     let itemsHTML = "";
     cart.forEach((item) => {
       itemsHTML += `
-    <tr>
-      <td><img src="${item.product.images[0] || ""}" alt="item" style="width:50px;height:50px;"></td>
-      <td>${item.product.primaryName}</td>
-      <td>QTY: ${item.quantity}</td>
-    </tr>
+        <div style=" width: 100%; padding: 15px 0; border-bottom: 1px solid #777; display:flex; align-items:center; justify-content:space-between">
+          <div style="width: 80px; height: 120px; display: flex; justify-content: center; align-items: center; background: #f5f5f5; border-radius: 4px;">
+            <img src="${item.product.images[0] || ""}" alt="${item.product.primaryName}" style="max-width: 100%; max-height: 120px; object-fit: contain;">
+          </div>
+          <div style="flex-grow: 1; padding: 0 20px; font-weight: 700; color: #333; font-size: 16px; text-transform: capitalize;">
+            ${item.product.primaryName}
+          </div>
+          <div style="width: 80px; text-align: right; font-weight: 700;">
+            QTY: ${item.quantity}
+          </div>
+        </div>
   `;
     });
 
@@ -67,7 +73,7 @@ function CheckoutForm({ isOpenForm, setIsOpenForm }) {
 
     try {
       await emailjs.send(
-        "service_la91uiu",
+        "service_1rxadtg",
         "template_7nhrk5h",
         templateParams,
         "JGYLDUx9juiD26eMC",
