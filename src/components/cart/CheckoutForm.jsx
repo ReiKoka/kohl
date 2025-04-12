@@ -5,11 +5,6 @@ import { useCart } from "../../hooks/useCart";
 import emailjs from "emailjs-com";
 import { useNavigate } from "react-router";
 import { EnvelopeSimple, Phone, User } from "@phosphor-icons/react";
-import {
-  validateEmail,
-  validatePhoneNumber,
-  validateTextField,
-} from "../../utils/helpers";
 
 import FormInput from "./form/FormInput";
 
