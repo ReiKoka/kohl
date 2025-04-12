@@ -2,16 +2,21 @@ import { Broom, ShoppingBag } from "@phosphor-icons/react";
 import { useCart } from "../../hooks/useCart";
 import SingleCartItem from "./SingleCartItem";
 import { showToast } from "./../../utils/showToast";
+import { useState } from "react";
+import CheckoutForm from "./CheckoutForm";
 
 function FilledCart() {
   const { cart, clearCart } = useCart();
+  const [isOpenForm, setIsOpenForm] = useState(false);
 
   const handleClearCart = () => {
     clearCart();
     showToast("info", "Your cart is clear!");
   };
 
-  const handleCheckout = () => {};
+  const handleCheckout = () => {
+    setIsOpenForm(true);
+  };
 
   return (
     <div className="flex h-full flex-col overflow-hidden">
@@ -23,6 +28,7 @@ function FilledCart() {
           <SingleCartItem key={index} item={item} />
         ))}
       </div>
+
       <div className="bg-secondary/20 shadow-custom absolute bottom-0 left-0 z-10 flex w-full gap-2 rounded-t-2xl p-4">
         <button
           className="btn btn-outline btn-lg font-primary flex flex-1/2 items-center justify-center gap-4 text-lg transition-all duration-150 active:scale-90"
@@ -31,6 +37,7 @@ function FilledCart() {
           <Broom className="fill-base-content h-5 w-5" strokeWidth={2} />
           <span>Clear Cart</span>
         </button>
+
         <button
           className="btn btn-primary btn-lg font-primary flex flex-1/2 items-center justify-center gap-4 text-lg transition-all duration-150 active:scale-90"
           onClick={handleCheckout}
@@ -42,6 +49,8 @@ function FilledCart() {
           <span>Checkout</span>
         </button>
       </div>
+
+      <CheckoutForm isOpenForm={isOpenForm} setIsOpenForm={setIsOpenForm} />
     </div>
   );
 }

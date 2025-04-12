@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import { useCart } from "../../../hooks/useCart";
 
 import { useNavigate } from "react-router";
-import { toast } from "sonner";
+import { showToast } from "../../../utils/showToast";
 
 export const Form = () => {
   const { cart, setCart } = useCart();
@@ -37,7 +37,7 @@ export const Form = () => {
         templateParams,
         "JGYLDUx9juiD26eMC",
       );
-      toast.success("Reserved Successfully, we''l be in touch shortly!");
+      showToast("success", "Reserved Successfully, we''l be in touch shortly!");
       navigate("/");
       setCart([]);
       setFormData({
@@ -47,7 +47,7 @@ export const Form = () => {
       });
     } catch (error) {
       console.error("Email sending failed:", error);
-      toast.error("Something Went Wrong!");
+      showToast("error", "Something Went Wrong!");
     }
   };
 
