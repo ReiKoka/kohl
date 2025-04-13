@@ -53,7 +53,6 @@ export const CartProvider = ({ children }) => {
         cart,
         setCart,
         totalItems,
-        // totalPrice,
         clearCart,
         onAdd,
         onRemove,
