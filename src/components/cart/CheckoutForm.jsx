@@ -98,7 +98,10 @@ function CheckoutForm({ isOpenForm, setIsOpenForm }) {
         templateParams,
         "JGYLDUx9juiD26eMC",
       );
-      showToast("success", "Reserved Successfully, we''l be in touch shortly!");
+      showToast(
+        "success",
+        "Order reservation successfull, we will be in touch shortly!",
+      );
       navigate("/");
       setCart([]);
       setFormData({
