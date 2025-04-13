@@ -57,7 +57,7 @@ function CheckoutForm({ isOpenForm, setIsOpenForm }) {
                   <!--[if mso]> <!-- Centering trick for Outlook -->
                   <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" style="height:120px;v-text-anchor:middle;width:80px;" arcsize="12%" strokecolor="#f5f5f5" fillcolor="#f5f5f5">
                     <w:anchorlock/>
-                    <center style="color:#000000;font-family: "Trebuchet MS", Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;">
+                    <center style="color:#000000;font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif;font-size:13px;font-weight:bold;">
                   <![endif]-->
                       <img src="${item.product.images[0] || ""}" alt="${item.product.primaryName}" width="80" style="max-width: 80px; max-height: 120px; height: auto; object-fit: contain; border-radius: 10px; display: block; margin: 0 auto; vertical-align: middle;" border="0">
                   <!--[if mso]>
@@ -66,14 +66,14 @@ function CheckoutForm({ isOpenForm, setIsOpenForm }) {
                   <![endif]-->
                 </div>
               </td>
-    
+
               <!-- Product Name Column (takes remaining space) -->
-              <td style="padding-left: 10px; padding-right: 10px; font-weight: 700; font-family: "Trebuchet MS", Helvetica, Arial, sans-serif; color: #B00B33; font-size: 16px; text-transform: capitalize; vertical-align: middle; text-align: left;">
+              <td style="padding-left: 10px; padding-right: 10px; font-weight: 700; font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif; color: #B00B33; font-size: 16px; text-transform: capitalize; vertical-align: middle; text-align: left;">
                 ${item.product.primaryName}
               </td>
-    
+
               <!-- Quantity Column -->
-              <td width="60" style="width: 60px; text-align: right; font-weight: 700; font-family: "Trebuchet MS", Helvetica, Arial, sans-serif; vertical-align: middle;">
+              <td width="60" style="width: 60px; text-align: right; font-weight: 700; font-family: 'Trebuchet MS', Helvetica, Arial, sans-serif; vertical-align: middle;">
                 QTY: ${item.quantity}
               </td>
             </tr>
