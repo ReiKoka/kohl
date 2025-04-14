@@ -57,9 +57,10 @@ function SingleCartItem({ item }) {
 
           <button
             onClick={handleRemoveItem}
-            className="btn group btn-sm btn-secondary aspect-square rounded-full p-0 transition-all duration-150 active:scale-75 xl:w-fit"
+            className="btn group btn-sm btn-secondary aspect-square rounded-full p-0 transition-all duration-150 active:scale-75 xl:w-fit 2xl:p-2 2xl:text-sm"
           >
             <Trash className="fill-base-primary group-hover:fill-base-100 h-5 w-5 transition-all duration-150" />
+            <span className="hidden w-max 2xl:block">Remove from cart</span>
           </button>
         </div>
       </div>
