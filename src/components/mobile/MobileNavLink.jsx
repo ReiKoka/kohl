@@ -7,10 +7,10 @@ function MobileNavLink({ setIsMobileNavOpen, to, icon: Icon, title }) {
         onClick={() => setIsMobileNavOpen()}
         to={to}
         className={({ isActive }) =>
-          `relative font-secondary md:w-full flex  gap-2 text-secondary py-2 px-4 text-center rounded-lg ${
+          `font-primary active:animate-jump animate-once animate-duration-300 animate-ease-out relative flex gap-2 rounded-full px-4 py-2 text-center font-medium transition-all duration-300 ${
             isActive
-              ? "text-secondary-content before:content-[''] before:absolute before:inset-0 before:bg-secondary before:rounded-lg before:-z-10"
-              : "text-secondary hover:bg-base-200"
+              ? "text-primary-content bg-primary"
+              : "text-secondary hover:text-primary-content hover:bg-primary"
           }`
         }
       >

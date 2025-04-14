@@ -42,7 +42,7 @@ function SingleJuice({ product }) {
         className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
-        <h6 className="text-lg font-extralight capitalize md:text-lg">
+        <h6 className="text-lg font-light text-secondary capitalize md:text-lg">
           {product.secondaryName}
         </h6>
         <h4 className="text-secondary text-2xl font-semibold capitalize md:text-2xl">
