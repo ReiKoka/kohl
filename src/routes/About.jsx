@@ -6,7 +6,7 @@ import Footer from "../components/ui/Footer";
 function About() {
   return (
     <section className="xl:max-w-9xl md:p-8 lg:px-8 lg:py-12">
-      <h1 className="font-secondary text-secondary pt-4 text-center text-2xl font-normal uppercase md:text-3xl lg:text-4xl">
+      <h1 className="font-secondary text-secondary pt-4 text-center text-2xl font-normal capitalize md:text-3xl lg:text-4xl">
         KOHL - The company
       </h1>
       <h3 className="font-secondary text-secondary pt-4 text-center text-base font-normal md:text-lg">

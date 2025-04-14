@@ -27,7 +27,7 @@ function SingleJuice({ product }) {
 
   return (
     <div
-      className="bg-secondary/20 font-secondary hover:bg-primary/10 focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-base-300 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-105 focus-visible:border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-0"
+      className="bg-base-300 font-secondary hover:shadow-2xl hover:shadow-secondary focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-base-300 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-105 focus-visible:border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-0"
       tabIndex={1}
       onClick={() => navigate(`/juices/${product.primaryName}`)}
     >

@@ -7,7 +7,7 @@ function AppLayout() {
   const { navHeight } = useNav();
 
   return (
-    <main className="bg-base-300 flex h-svh max-h-svh w-dvw flex-col overflow-hidden">
+    <main className="bg-base-200 flex h-svh max-h-svh w-dvw flex-col overflow-hidden">
       <Nav />
       <div
         style={{ marginTop: `${navHeight}px` }}
