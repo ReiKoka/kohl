@@ -95,7 +95,7 @@
     gap: 8px;
   }
 
-  .embla__viewport {
+  .embla-juice .embla__viewport {
     border-radius: var(--radius-xl);
   }
 }

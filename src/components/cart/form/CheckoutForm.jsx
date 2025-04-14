@@ -29,7 +29,7 @@ function CheckoutForm() {
       onSubmit={(e) =>
         handleSubmit(e, formData, cart, navigate, setCart, setFormData)
       }
-      className="flex w-full grow flex-col items-center gap-4 md:mx-auto md:w-1/2 lg:w-full"
+      className="flex w-full grow flex-col items-center gap-4 md:mx-auto md:w-1/2 lg:w-full lg:grow "
     >
       <FormInput
         value={formData.firstName}

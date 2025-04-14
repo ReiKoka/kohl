@@ -29,14 +29,14 @@ function FilledCart() {
         Your Cart
       </h1>
 
-      <div className="mt-3 lg:mx-4 lg:flex lg:gap-4">
-        <div className="lg:shadow-custom mb-32 flex h-full grow flex-col gap-1 overflow-hidden p-3 pl-0 md:p-6 md:pl-0 lg:h-auto lg:flex-2/3 lg:grow-0 lg:rounded-2xl 2xl:flex-3/4">
+      <div className="mt-3 lg:mx-4 lg:flex lg:gap-4 lg:h-full lg:my-3">
+        <div className="lg:shadow-custom mb-32 flex h-full grow flex-col gap-1 overflow-hidden p-3 pl-0 md:p-6 md:pl-0 lg:mb-0 lg:h-auto lg:flex-2/3 lg:grow-0 lg:rounded-2xl 2xl:flex-3/4">
           {cart.map((item, index) => (
             <SingleCartItem key={index} item={item} />
           ))}
         </div>
 
-        <div className="bg-base-200 shadow-custom absolute bottom-0 left-0 z-10 grid w-full grid-cols-2 flex-col gap-2 rounded-t-2xl p-4 lg:static lg:bottom-auto lg:left-auto lg:h-fit lg:flex-1/3 lg:rounded-2xl 2xl:flex-1/4">
+        <div className="bg-base-200 shadow-custom lg:h-full absolute bottom-0 left-0 z-10 grid w-full grid-cols-2 flex-col gap-2 rounded-t-2xl p-4 lg:static lg:bottom-auto lg:left-auto  lg:flex-1/3 lg:rounded-2xl 2xl:flex-1/4 lg:grid-rows-[auto_auto_1fr]">
           {/* ================================================= Continue Shopping Button ================================================= */}
           <button
             onClick={() => navigate("/juices")}
@@ -65,10 +65,10 @@ function FilledCart() {
             />
             <span>Checkout</span>
           </button>
-          <div className="divider col-start-1 col-end-3 hidden lg:flex">OR</div>
+          <div className="divider col-start-1 col-end-3 hidden lg:flex lg:mb-2">OR</div>
 
-          <div className="col-start-1 col-end-3 hidden lg:block">
-            <h1 className="font-primary text-secondary pb-6 text-center text-xl font-semibold md:pb-8 md:text-2xl">
+          <div className="col-start-1 col-end-3 hidden lg:flex lg:flex-col">
+            <h1 className="font-primary text-secondary pb-6 text-center text-xl font-semibold md:pb-8 md:text-2xl lg:pb-4">
               Checkout
             </h1>
             <CheckoutForm />

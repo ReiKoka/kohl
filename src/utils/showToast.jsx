@@ -43,7 +43,7 @@ export const showToast = (type, message) => {
 
   toast.custom(() => (
     <div
-      className={`bg-base-200 flex w-auto items-center gap-4 rounded-xl border border-none p-4 sm:min-w-80`}
+      className={`bg-base-200 shadow-lg flex w-auto items-center gap-4 rounded-xl border border-none p-4 sm:min-w-80`}
     >
       {icons[type] || icons.info}
       <div>
