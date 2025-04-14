@@ -1,6 +1,11 @@
-import { NavLink } from "react-router";
+import { NavLink, useLocation } from "react-router";
+import { useCart } from "./../../hooks/useCart";
 
 function WebNavLink({ to, title }) {
+  const { totalItems } = useCart();
+  const location = useLocation();
+  console.log(location);
+
   return (
     <li>
       <NavLink
@@ -14,6 +19,13 @@ function WebNavLink({ to, title }) {
         }
       >
         {title}
+        {!(location.pathname === "/cart") && (
+          <p
+            className={`${title.toLowerCase() === "cart" ? "animate-jump-in bg-primary text-primary-content absolute -top-2.5 right-0 h-6 w-6 rounded-full text-center" : "hidden"}`}
+          >
+            {totalItems}
+          </p>
+        )}
       </NavLink>
     </li>
   );

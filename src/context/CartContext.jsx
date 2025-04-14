@@ -6,7 +6,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useLocalStorage("cart", []);
 
-  const totalItems = cart?.length || 0;
+  const totalItems = cart?.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
   const onAdd = (productToAdd, quantity = 1) => {
     setCart((prevCart) => {
