@@ -11,6 +11,8 @@ function FilledCart() {
   const [isOpenForm, setIsOpenForm] = useState(false);
   const navigate = useNavigate();
 
+  console.log(cart);
+
   const handleClearCart = () => {
     clearCart();
     showToast("info", "Your cart is clear!");
@@ -25,7 +27,7 @@ function FilledCart() {
       <h1 className="font-secondary text-secondary my-2 text-center text-2xl font-normal capitalize md:text-3xl lg:text-4xl">
         Your Cart
       </h1>
-      <div className="my-3 flex h-full grow flex-col gap-1 overflow-y-auto lg:h-auto lg:grow-0">
+      <div className="mt-3 mb-32 flex h-full grow flex-col gap-1 overflow-hidden lg:h-auto lg:grow-0">
         {cart.map((item, index) => (
           <SingleCartItem key={index} item={item} />
         ))}
@@ -53,7 +55,10 @@ function FilledCart() {
           </button>
         </div>
 
-        <button onClick={() => navigate("/juices")} className="btn btn-link font-primary text-base">
+        <button
+          onClick={() => navigate("/juices")}
+          className="btn btn-link font-primary text-base"
+        >
           Continue shopping
         </button>
       </div>
