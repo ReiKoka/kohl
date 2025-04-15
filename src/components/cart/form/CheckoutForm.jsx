@@ -3,7 +3,8 @@ import { useCart } from "../../../hooks/useCart";
 import { useNavigate } from "react-router";
 import { handleSubmit } from "./formMethods";
 import { EnvelopeSimple, Phone, User } from "@phosphor-icons/react";
-import FormInput from './FormInput';
+import FormInput from "./FormInput";
+import ButtonLoader from "../../ui/ButtonLoader";
 
 const emptyFormData = {
   firstName: "",
@@ -22,14 +23,16 @@ const errorsData = {
 function CheckoutForm() {
   const [formData, setFormData] = useState(emptyFormData);
   const [errors, setErrors] = useState(errorsData);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const { cart, setCart } = useCart();
   const navigate = useNavigate();
   return (
     <form
       onSubmit={(e) =>
-        handleSubmit(e, formData, cart, navigate, setCart, setFormData)
+        handleSubmit(e, formData, cart, navigate, setCart, setFormData, setIsSubmitting, emptyFormData)
       }
-      className="flex w-full grow flex-col items-center gap-4 md:mx-auto md:w-1/2 lg:w-full lg:grow "
+      className="flex w-full grow flex-col items-center gap-4 md:mx-auto md:w-1/2 lg:w-full lg:grow"
     >
       <FormInput
         value={formData.firstName}
@@ -94,9 +97,17 @@ function CheckoutForm() {
         <button
           type="submit"
           title="Confirm Order"
-          className="btn btn-primary font-primary flex-1/2"
+          className="btn btn-primary font-primary relative flex-1/2"
+          disabled={isSubmitting}
         >
-          Confirm Order
+          {isSubmitting ? (
+            <>
+              <ButtonLoader />
+              <span className="text-primary ml-2">Submitting...</span>
+            </>
+          ) : (
+            <span>Confirm Order</span>
+          )}
         </button>
       </div>
     </form>

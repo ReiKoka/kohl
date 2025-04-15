@@ -21,7 +21,7 @@ function WebNavLink({ to, title }) {
         {title}
         {!(location.pathname === "/cart") && (
           <p
-            className={`${title.toLowerCase() === "cart" ? "animate-jump-in bg-primary text-primary-content absolute -top-2.5 right-0 h-6 w-6 rounded-full text-center" : "hidden"}`}
+            className={`${title.toLowerCase() === "cart" && totalItems > 0 ? "animate-jump-in bg-primary text-primary-content absolute -top-2.5 right-0 h-6 w-6 rounded-full text-center" : "hidden"}`}
           >
             {totalItems}
           </p>

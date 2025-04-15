@@ -24,7 +24,7 @@ export const handleChange = (e, setFormData, setErrors) => {
   }));
 };
 
-export   const handleSubmit = async (e, formData, cart, navigate, setCart, setFormData) => {
+export const handleSubmit = async (e, formData, cart, navigate, setCart, setFormData, setIsSubmitting, emptyFormData) => {
   e.preventDefault();
 
   const firstName = formData.firstName;
@@ -80,6 +80,8 @@ export   const handleSubmit = async (e, formData, cart, navigate, setCart, setFo
   };
 
   try {
+    setIsSubmitting(true);
+
     await emailjs.send(
       "service_1rxadtg",
       "template_7nhrk5h",
@@ -88,17 +90,15 @@ export   const handleSubmit = async (e, formData, cart, navigate, setCart, setFo
     );
     showToast(
       "success",
-      "Order reservation successfull, we will be in touch shortly!",
+      "Order reservation successful, we will be in touch shortly!",
     );
     navigate("/");
     setCart([]);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-    });
+    setFormData(emptyFormData);
   } catch (error) {
     console.error("Email sending failed:", error);
     showToast("error", "Something Went Wrong!");
+  } finally {
+    setIsSubmitting(false)
   }
 };
