@@ -2,16 +2,20 @@ import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
 import { useOnClickOutside } from "usehooks-ts";
-import { Cheers } from "@phosphor-icons/react";
+import { Cheers, ShoppingCartSimple } from "@phosphor-icons/react";
 import { createPortal } from "react-dom";
 import { links } from "./../../utils/constants";
 import MobileNavLink from "./MobileNavLink";
+import { useNavigate } from "react-router";
+import { useCart } from "../../hooks/useCart";
 
 function MobileNav() {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false);
   const mobileNavRef = useRef(null);
   const toggleButtonRef = useRef(null);
   const [portalContainer, setPortalContainer] = useState(null);
+  const navigate = useNavigate();
+  const { totalItems } = useCart();
 
   useEffect(() => {
     const portalRoot = document.getElementById("portal-root");
@@ -49,20 +53,38 @@ function MobileNav() {
 
   return (
     <>
-      <button
-        ref={toggleButtonRef}
-        className="btn border-primary bg-base-300 hover:bg-primary group ml-auto aspect-square border p-1 active:scale-95"
-        onClick={toggleMobileNav}
-        aria-label="Toggle mobile navigation"
-        aria-expanded={isMobileNavOpen}
-        aria-controls="mobile-nav-panel"
-      >
-        <Cheers
-          size={24}
-          className="fill-primary group-hover:fill-primary-content rotate-12"
-          weight="regular"
-        />
-      </button>
+      <div className="flex w-fit items-center gap-3">
+        <button
+          className="btn border-primary bg-base-300 active:animate-jump hover:bg-primary group btn-square relative p-1"
+          onClick={() => navigate("/cart")}
+        >
+          <ShoppingCartSimple
+            size={22}
+            className="group-hover:fill-primary-content fill-secondary"
+            weight="regular"
+          />
+          <div
+            className={`${totalItems > 0 ? "animate-jump-in bg-primary text-primary-content absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full text-center" : "hidden"}`}
+          >
+            <p className="leading-0">{totalItems}</p>
+          </div>
+        </button>
+
+        <button
+          ref={toggleButtonRef}
+          className="btn border-primary bg-base-300 hover:bg-primary group btn-square active:animate-jump border p-1"
+          onClick={toggleMobileNav}
+          aria-label="Toggle mobile navigation"
+          aria-expanded={isMobileNavOpen}
+          aria-controls="mobile-nav-panel"
+        >
+          <Cheers
+            size={24}
+            className="fill-primary group-hover:fill-primary-content rotate-12"
+            weight="regular"
+          />
+        </button>
+      </div>
 
       {portalContainer &&
         createPortal(

@@ -13,9 +13,5 @@ export const links = [
     to: '/about',
     icon: Question,
     title: 'About Us',
-  }, {
-    to: '/cart',
-    icon: ShoppingCartSimple,
-    title: 'Cart'
-  }
+  }, 
 ]
