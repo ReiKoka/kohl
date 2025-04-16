@@ -10,6 +10,7 @@ import img7 from "../../assets/images/img7.png";
 import img8 from "../../assets/images/img8.png";
 import img9 from "../../assets/images/img9.png";
 import img10 from "../../assets/images/img10.png";
+import AnimatedOnScroll from "../ui/AnimatedOnScroll";
 
 const slides = [
   {
@@ -58,22 +59,28 @@ const options = { loop: true };
 function HowToUse() {
   return (
     <section className="border-secondary/30 mt-8 flex w-full flex-col border-b md:p-8 lg:px-8 lg:py-12">
-      <h1 className="font-secondary text-secondary text-center text-2xl font-normal md:text-3xl lg:text-4xl">
-        How you can use our juices
-      </h1>
-      <p className="font-secondary text-secondary mx-auto max-w-3xl px-6 py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
-        You can use our juices in a variety of different environments and
-        settings. Pure and clear, distinctive and surprising, light and
-        challenging, much of it in combination and not simply sweet. For people
-        who have an open heart, and who delight in authentic experiences.
-        Knowledge guides the senses.{" "}
-        <span className="text-primary">
-          Each of our juices has a unique profile.
-        </span>
-      </p>
-      <div className="mx-auto mt-8 h-[340px] min-h-80 w-full max-w-4xl md:h-full">
-        <HowToUseCarousel slides={slides} options={options} />
-      </div>
+      <AnimatedOnScroll animationClass="animate-fade-left">
+        <h1 className="font-secondary text-secondary text-center text-2xl font-normal md:text-3xl lg:text-4xl">
+          How you can use our juices
+        </h1>
+      </AnimatedOnScroll>
+      <AnimatedOnScroll animationClass="animate-fade-right">
+        <p className="font-secondary text-secondary mx-auto max-w-3xl px-6 py-4 text-center text-xs font-light md:mt-4 md:text-lg lg:mt-6 2xl:max-w-5xl">
+          You can use our juices in a variety of different environments and
+          settings. Pure and clear, distinctive and surprising, light and
+          challenging, much of it in combination and not simply sweet. For
+          people who have an open heart, and who delight in authentic
+          experiences. Knowledge guides the senses.{" "}
+          <span className="text-primary">
+            Each of our juices has a unique profile.
+          </span>
+        </p>
+      </AnimatedOnScroll>
+      <AnimatedOnScroll animationClass="animate-fade animate-duration-1000">
+        <div className="mx-auto mt-8 h-[340px] min-h-80 w-full max-w-4xl md:h-full">
+          <HowToUseCarousel slides={slides} options={options} />
+        </div>
+      </AnimatedOnScroll>
     </section>
   );
 }

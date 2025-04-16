@@ -22,7 +22,7 @@ const HeroCarousel = (props) => {
     <section className="embla">
       <div className="bg-base-content/40 pointer-events-none absolute inset-0 z-10">
         <div className="flex h-full w-full items-center justify-center">
-          <p className="font-primary text-base-200 top-1/2 left-1/2 max-w-96 text-center text-2xl font-black tracking-wide text-shadow-lg md:text-3xl lg:max-w-96 lg:text-4xl xl:max-w-none xl:text-6xl 2xl:text-7xl">
+          <p className="font-primary text-base-200 top-1/2 left-1/2 max-w-96 text-center text-2xl font-black tracking-wide text-shadow-lg md:text-3xl lg:max-w-96 lg:text-4xl xl:max-w-none xl:text-6xl 2xl:text-7xl animate-once animate-fade-down">
             The Apple Juice from the mountains
           </p>
         </div>
