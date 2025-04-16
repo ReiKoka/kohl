@@ -27,7 +27,7 @@ function SingleJuice({ product }) {
 
   return (
     <div
-      className="bg-base-300 font-secondary hover:shadow-2xl hover:shadow-secondary focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-base-300 relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-lg transition-all duration-150 hover:scale-105 focus-visible:border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-0"
+      className="bg-base-300 font-secondary focus-visible:ring-primary focus-visible:border-primary focus-visible:ring-offset-base-300 shadow-secondary relative flex w-full cursor-pointer overflow-hidden rounded-xl pt-3 shadow-sm transition-all duration-150 hover:-translate-y-2.5 focus-visible:border focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:outline-0"
       tabIndex={1}
       onClick={() => navigate(`/juices/${product.primaryName}`)}
     >
@@ -42,7 +42,7 @@ function SingleJuice({ product }) {
         className="-ml-6 w-36 md:ml-0 lg:w-40"
       />
       <div className="relative -ml-6 flex w-full grow flex-col py-5 pr-5 md:ml-0">
-        <h6 className="text-lg font-light text-secondary capitalize md:text-lg">
+        <h6 className="text-secondary text-lg font-light capitalize md:text-lg">
           {product.secondaryName}
         </h6>
         <h4 className="text-secondary text-2xl font-semibold capitalize md:text-2xl">
